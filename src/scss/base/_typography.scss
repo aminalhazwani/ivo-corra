@@ -1,0 +1,23 @@
+/*
+ * Typography
+ */
+
+// Import 'Inconsolata' Monospaced font from Google Font
+@import url(http://fonts.googleapis.com/css?family=Inconsolata);
+
+// Set the html font-size
+html {
+    font-size: 1em;
+    line-height: 1.4;
+
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+
+// Set the font-family for the body with fallback fonts
+body {
+    font-family: 'Inconsolata', 'Lucida Console', 'Courier New', monospace;
+}

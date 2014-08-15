@@ -1,0 +1,237 @@
+// Site name
+.site {
+  @include e(title) {
+    position: fixed;
+    z-index: -2;
+    top: 50%;
+    transform: translateY(-50%);
+    @include media-query(tabl-and-down) {
+      top: 0;
+      transform: translateY(0);
+
+      font-size: 1.8rem;
+      line-height: 1.7;
+    }
+
+    width: 100%;
+    margin: 0;
+
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 4rem;
+    font-weight: 400;
+    letter-spacing: 1rem;
+
+    a {
+        padding-left: 1rem;
+        
+        text-decoration: none;
+        color: $black;
+    }
+  }
+}
+
+
+// Menu Toogle
+.menu {
+  @include e(toogle) {
+    position: fixed;
+    z-index: -1;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+
+    width: 3rem;
+    height: 3rem;
+    margin-left: 2rem;
+
+    cursor: pointer;
+
+    @include media-query(tabl-and-down) {
+      top: 0;
+      transform: translateY(0);
+      
+      margin-left: 1rem;
+    }
+
+    @include media-query(palm) {
+      top: auto;
+      bottom: 0;
+    }
+  }
+}
+
+// Menu Bars
+.menu {
+  @include e(toogle) {
+    @include m(bars) {
+      position: absolute;
+      display: block;
+
+      width: 3rem;
+      height: 0.25rem;
+      margin-top: 1.5rem;
+      @include media-query(tabl-and-down) {
+        width: 2rem;
+        height: 0.15rem;
+      }
+
+      background-color: $black;
+      content: " ";
+
+      &:after {
+        position: absolute;
+        display: block;
+        bottom: 0.75rem;
+
+        width: 3rem;
+        height: 0.25rem;
+        @include media-query(tabl-and-down) {
+          bottom: 0.5rem;
+
+          width: 2rem;
+          height: 0.15rem;
+        }
+
+        background-color: $black;
+        content: " ";
+      }
+
+      &:before {
+        position: absolute;
+        display: block;
+        top: 0.75rem;
+
+        width: 3rem;
+        height: 0.25rem;
+        @include media-query(tabl-and-down) {
+          top: 0.5rem;
+
+          width: 2rem;
+          height: 0.15rem;
+        }
+
+        background-color: $black;
+        content: " ";
+      }
+    }
+  }
+}
+
+// Menu is open
+.menu {
+  @include e(toogle) {
+    &.is-open {
+      z-index: 999;
+
+      span {
+        background-color: transparent;
+
+        &:before {
+          background-color: #fff;
+          transform: rotate(45deg);
+          opacity: 1;
+          top: 0;
+        }
+
+        &:after {
+          background-color: #fff;
+          transform: rotate(-45deg);
+          opacity: 1;
+          top: 0;
+        }
+      }
+    }
+  }
+}
+
+
+// Contact Toogle
+.contact {
+  @include e(toogle) {
+    position: fixed;
+    z-index: -1;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+
+    width: 3rem;
+
+    font-size: 3rem;
+    cursor: pointer;
+
+    @include m(icon) {
+      &:after {
+        content: "@";
+      }
+    }
+
+    @include media-query(tabl-and-down) {
+      top: 0;
+      transform: translateY(0);
+
+      width: 2rem;
+
+      font-size: 2rem;
+      line-height: 1.5;
+    }
+
+    @include media-query(palm) {
+      top: auto;
+      bottom: 0;
+    }
+  }
+}
+
+// Contact is open
+.contact {
+  @include e(toogle) {
+    &.is-open {
+      z-index: 999;
+      right: 0;
+
+      height: 3rem;
+      margin-right: 1rem;
+
+      span {
+        &:after {
+          position: absolute;
+          display: block;
+          transform: rotate(-45deg);
+          opacity: 1;
+          top: 1.5rem;
+
+          width: 3rem;
+          height: 0.25rem;
+
+          background-color: $black;
+          content: " ";
+
+          @include media-query(tabl-and-down) {
+            width: 2rem;
+            height: 0.15rem;
+          }
+        }
+
+        &:before {
+          position: absolute;
+          display: block;
+          transform: rotate(45deg);
+          opacity: 1;
+          top: 1.5rem;
+
+          width: 3rem;
+          height: 0.25rem;
+
+          background-color: $black;
+          content: " ";
+
+          @include media-query(tabl-and-down) {
+            width: 2rem;
+            height: 0.15rem;
+          }
+        }
+      }
+    }
+  }
+}

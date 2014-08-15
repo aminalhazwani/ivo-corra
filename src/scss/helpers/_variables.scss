@@ -1,0 +1,13 @@
+// Colors
+$black: #000;
+$white: #fff;
+
+// Mediaqueries
+$tabl-start:        481px;
+$lap-start:         768px;
+$desk-start:        1024px;
+$desk-wide-start:   1200px;
+
+$palm-end:     $tabl-start - 1px;
+$tabl-end:     $lap-start - 1px;
+$lab-end:      $desk-start -1px;
