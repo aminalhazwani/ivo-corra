@@ -3,12 +3,9 @@
 # default blueprint
 
 title: Page
-pages: false
+pages: true
 files: false
 fields:
     title: 
         label: Titolo pagina
         type:  text
-    clients: 
-        label: Clienti selezionati
-        type: tags

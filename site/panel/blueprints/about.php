@@ -13,6 +13,7 @@ fields:
         label: Biografia
         type:  textarea
         size:  large
+        buttons: true
     address: 
         label: Via/piazza e numero civico
         type:  text
