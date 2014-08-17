@@ -18,3 +18,13 @@
     </div>
   </div>
 </div>
+
+<script type="text/javascript">
+    $('.contact__container').flowtype({
+       minimum   : 500,
+       maximum   : 1200,
+       minFont   : 18,
+       maxFont   : 40,
+       fontRatio : 30
+    });
+</script>
