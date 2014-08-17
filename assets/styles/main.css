@@ -508,6 +508,12 @@ body {
   }
 }
 
+.active {
+  -webkit-transform: rotate(-10deg);
+      -ms-transform: rotate(-10deg);
+          transform: rotate(-10deg);
+}
+
 .contact__container {
   position: fixed;
   z-index: 99;

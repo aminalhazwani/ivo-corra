@@ -1,39 +1,18 @@
-<div class="menu__container">
-    <ul class="menu__container--list">
-        <li class="menu__container--list--item">
-            <a href="<?php echo url() ?>works">
-                <?php
-                    $work = $pages->find('works');
-                    echo $work->title();
-                ?>
-            </a>
-        </li>
-        
-        <li class="menu__container--list--item">
-            <a href="<?php echo url() ?>about">
-                <?php
-                    $about = $pages->find('about');
-                    echo $about->title();
-                ?>
-            </a>
-        </li>
-        
-        <li class="menu__container--list--item">
-            <a href="<?php echo url() ?>journal">
-                <?php
-                    $journal = $pages->find('journal');
-                    echo $journal->title();
-                ?>
-            </a>
-        </li>
-        
-        <li class="menu__container--list--item">
-            <a href="<?php echo url() ?>credit">
-                <?php
-                    $credit = $pages->find('credit');
-                    echo $credit->title();
-                ?>
-            </a>
-        </li>
-    </ul>
-</div>
+<?php 
+
+// main menu items
+$items = $pages->visible()->not('publications')->not('exhibitions');;
+
+// only show the menu if items are available
+if($items->count() > 0): 
+
+?>
+<nav class="menu__container">>
+  <ul class="menu__container--list">
+    <li class="menu__container--list--item"><a href="<?php echo url() ?>">startpage</a>
+    <?php foreach($items as $item): ?>
+    <li class="menu__container--list--item"><a<?php ecco($item->isOpen(), ' class="active"') ?> href="<?php echo $item->url() ?>"><?php echo html($item->title()) ?></a></li>
+    <?php endforeach ?>
+  </ul>
+</nav>
+<?php endif ?>
