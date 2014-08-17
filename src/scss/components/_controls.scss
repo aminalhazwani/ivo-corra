@@ -2,7 +2,7 @@
 .site {
   @include e(title) {
     position: fixed;
-    z-index: -2;
+    z-index: -1;
     top: 50%;
     transform: translateY(-50%);
     @include media-query(tabl-and-down) {
@@ -36,7 +36,7 @@
 .menu {
   @include e(toogle) {
     position: fixed;
-    z-index: -1;
+    z-index: 1;
     top: 50%;
     left: 0;
     transform: translateY(-50%);
@@ -150,7 +150,7 @@
 .contact {
   @include e(toogle) {
     position: fixed;
-    z-index: -1;
+    z-index: 1;
     top: 50%;
     right: 0;
     transform: translateY(-50%);

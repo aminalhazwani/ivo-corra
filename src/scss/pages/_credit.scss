@@ -1,0 +1,78 @@
+.credit__container {
+    max-width: 70%;
+    margin: 0 auto;
+    padding: 5% 0;
+    overflow: hidden;
+
+    background-color: $white;
+
+    @include media-query(tabl) {
+        max-width: 80%;
+
+        padding-top: 10%;
+    }
+
+    @include media-query(palm) {
+        max-width: 90%;
+        padding-top: 5%;
+    }
+}
+
+.section__title {
+    display: block;
+
+    margin-bottom: 1rem;
+
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
+}
+
+.clients  {
+    margin-bottom: 3rem; 
+
+    ul {
+        margin: 0;
+        padding: 0;
+
+        list-style-type: none;
+        li {
+            display: inline-block;
+            &:after {
+                content: "/";
+            }
+            &:last-child {
+                &:after {
+                    content: " ";
+                }
+            }
+        }
+    }
+}
+
+.exhibitions  {
+    margin-bottom: 3rem; 
+
+    ul {
+        margin: 0;
+        padding: 0;
+
+        list-style-type: none;
+    }
+}
+
+.publications {
+    margin-bottom: 3rem;
+
+    ul {
+        margin: 0;
+        padding: 0;
+
+        list-style-type: none;
+    }
+}
+
+.publication {
+    float: left;
+    width: 50%;
+    margin-bottom: 2rem;
+}

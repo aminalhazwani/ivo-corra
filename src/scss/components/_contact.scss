@@ -1,6 +1,7 @@
 .contact {
   @include e(container) {
     position: absolute;
+    z-index: 99;
     display: none;
     overflow: hidden;
     width: 100%;

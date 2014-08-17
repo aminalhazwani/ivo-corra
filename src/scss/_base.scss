@@ -1,15 +1,18 @@
 /*  TEMPORARY DEFINITION  */
 
-.container.is-hidden {
-    display: none;
-}
-
 .container {
     max-width: 90%;
     margin: 5rem auto;
+
+    &.is-hidden {
+        display: none;
+    }
 }
 
+
 .work {
+    z-index: 3;
+
     background-color: #fff;
     line-height: 0;
 
@@ -22,6 +25,14 @@
 }
 
 .work a:first-child {
+    display: block;
+}
+
+.publication a {
+    display: none;
+}
+
+.publication a:first-child {
     display: block;
 }
 
