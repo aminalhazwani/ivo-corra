@@ -1,0 +1,13 @@
+﻿Title: Titolo di un exhibit
+
+----
+
+Startdate: 13.08.2014
+
+----
+
+Enddate: 21.08.2014
+
+----
+
+Place: Lugo dell mosta
