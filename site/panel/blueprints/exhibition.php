@@ -23,3 +23,6 @@ fields:
         label: Luogo della mostra
         type:  text
         required: true
+    link: 
+        label: Link alla pagina della mostra
+        type:  text

@@ -28,43 +28,61 @@
 }
 
 .clients  {
-    margin-bottom: 3rem; 
+    margin-bottom: 5rem; 
 
-    ul {
+    @include e(list) {
         margin: 0;
         padding: 0;
 
         list-style-type: none;
-        li {
+
+        @include m(item) {
             display: inline-block;
-            &:after {
-                content: "/";
-            }
-            &:last-child {
-                &:after {
-                    content: " ";
-                }
-            }
+            margin-right: 2rem;
         }
     }
 }
 
 .exhibitions  {
-    margin-bottom: 3rem; 
+    margin-bottom: 5rem; 
 
-    ul {
+    @include e(list) {
         margin: 0;
         padding: 0;
 
         list-style-type: none;
+
+        @include m(item) {
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+.exhibition {
+    @include e(title) {
+        margin: 0;
+        font-weight: 400;
+    }
+
+    @include e(link) {
+        font-size: small;
+        color: $black;
+        text-decoration: none;
+        text-transform: uppercase;
+        border-bottom: 1px solid $black;
+    }
+
+    @include e(date) {
+        margin-right: 1rem;
+        font-size: small;
     }
 }
 
 .publications {
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
 
     ul {
-        margin: 0;
+        margin: 0 0 0 -2rem;
         padding: 0;
 
         list-style-type: none;
@@ -72,7 +90,17 @@
 }
 
 .publication {
-    float: left;
-    width: 50%;
+    display: inline-block;
+    width: 44%;
     margin-bottom: 2rem;
+    padding-left: 2rem;
+
+    @include media-query(tabl-and-down) {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    span {
+        font-size: small;
+    }
 }

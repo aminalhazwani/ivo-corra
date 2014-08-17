@@ -6,9 +6,9 @@
     <div class="credit__container">
         <section class="clients">
             <span class="section__title">selected clients</span>
-            <ul>
+            <ul class="clients__list">
                 <?php foreach(str::split($page->clients()) as $client): ?>
-                    <li>
+                    <li class="clients__list--item">
                         <?php echo $client ?>
                     </li>
                 <?php endforeach ?>
@@ -18,9 +18,11 @@
         <section class="exhibitions">
             <span class="section__title">Exhibitions</span>
             <?php foreach($pages->find('/exhibitions')->children()->visible() as $exhibition): ?>
-                <ul>
-                    <li>
-                        <span>
+                <ul class="exhibitions__list">
+                    <li class="exhibitions__list--item exhibition">
+                        <h4 class="exhibition__title"><?php echo $exhibition->title() ?></h4>
+
+                        <span class="exhibition__date">
                             <?php if(strtotime($exhibition->enddate()) != ''): ?>
                                 <?php echo date('M j', strtotime($exhibition->startdate())) ?> &#8211; <?php echo date('M j, Y', strtotime($exhibition->enddate())) ?>
                             <?php else: ?>
@@ -28,7 +30,9 @@
                             <?php endif ?>
                         </span>
 
-                        <span><?php echo $exhibition->title() ?></span>
+                        <?php if($exhibition->link() != ''): ?>
+                        <a class="exhibition__link" href="<?php echo $exhibition->link() ?>">link &#8594;</a>
+                        <?php endif ?>
                     </li>
                 </ul>
             <?php endforeach ?>
@@ -36,8 +40,8 @@
 
         <section class="publications">
             <span class="section__title">publications</span>
-            <?php foreach($pages->find('/publications')->children()->visible() as $publication): ?>
-                <ul>
+            <ul>
+                <?php foreach($pages->find('/publications')->children()->visible() as $publication): ?>
                     <li class="publication">
                         <?php if($publication->hasImages()): ?>
                         <figure class="">
@@ -53,9 +57,19 @@
                         <span><?php echo $publication->date('M. Y') ?></span>,
                         <span><?php echo $publication->editor() ?></span>
                     </li>
-                </ul>
-            <?php endforeach ?>
+                <?php endforeach ?>
+            </ul>
         </section>
     </div>
+
+    <script type="text/javascript">
+    $('.clients__list, .exhibition__title').flowtype({
+       minimum   : 500,
+       maximum   : 1200,
+       minFont   : 18,
+       maxFont   : 40,
+       fontRatio : 30
+    });
+    </script>
 
 <?php snippet('foot') ?>
