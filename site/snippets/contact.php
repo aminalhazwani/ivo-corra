@@ -16,6 +16,12 @@
       <p>cod.fisc./St.nr. <?php $about = $pages->find('about'); echo $about->fiscal(); ?><p>
       <p>p.iva/Mwst. <?php $about = $pages->find('about'); echo $about->vat(); ?></p>
     </div>
+
+    <div class="contact__container--colophone">
+      <a href="http://aminalhzwani.github.io">
+        <span class="pile-of-poo">Made with</span><span>in Italy</span>
+      </a>
+    </div>
   </div>
 </div>
 
