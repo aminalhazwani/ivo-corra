@@ -18,7 +18,7 @@
     </div>
 
     <div class="contact__container--colophone">
-      <a href="http://aminalhzwani.github.io">
+      <a href="http://aminalhazwani.github.io">
         <span class="pile-of-poo">Made with</span><span>in Italy</span>
       </a>
     </div>
