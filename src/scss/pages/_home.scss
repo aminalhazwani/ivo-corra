@@ -1,15 +1,3 @@
-/*  TEMPORARY DEFINITION  */
-
-.container {
-    max-width: 90%;
-    margin: 5rem auto;
-
-    &.is-hidden {
-        display: none;
-    }
-}
-
-
 .work {
     z-index: 3;
 
@@ -47,17 +35,4 @@ img{
 
 .box:hover > img {
     opacity: 0.2;
-}
-
-.overlay {
-    opacity: 0;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-image: url(../images/eye__white.svg);
-    background-color: #000;
-    background-size: 0;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    z-index: 1;
 }

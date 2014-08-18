@@ -13,7 +13,11 @@
 @import "components/lightbox";
 
 // Pages
+@import "pages/home";
 @import "pages/about";
 @import "pages/credit";
+@import "pages/works";
+@import "pages/journal";
 
-@import "base";
+//Theme
+@import "themes/theme";
