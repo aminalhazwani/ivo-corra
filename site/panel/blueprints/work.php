@@ -12,3 +12,10 @@ fields:
     tags: 
         label: Categoria
         type: tags
+    home: 
+        label: Lavoro in homepage
+        type: radio
+        options:
+            ja:  Inserisci
+            nein: Non inserisci
+        default: ja
