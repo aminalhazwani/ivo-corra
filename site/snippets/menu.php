@@ -9,9 +9,17 @@ if($items->count() > 0):
 ?>
     <nav class="menu__container">>
       <ul class="menu__container--list">
-        <li class="menu__container--list--item"><a href="<?php echo url() ?>">home</a>
+        <li class="menu__container--list--item">
+            <a<?php ecco($pages->find('/home')->isOpen(), ' class="active"') ?> href="<?php echo url() ?>">
+                home
+            </a>
+        </li>
         <?php foreach($items as $item): ?>
-        <li class="menu__container--list--item"><a<?php ecco($item->isOpen(), ' class="active"') ?> href="<?php echo $item->url() ?>"><?php echo html($item->title()) ?></a></li>
+        <li class="menu__container--list--item">
+            <a<?php ecco($item->isOpen(), ' class="active"') ?> href="<?php echo $item->url() ?>">
+                <?php echo html($item->title()) ?>
+            </a>
+        </li>
         <?php endforeach ?>
       </ul>
     </nav>
