@@ -2,12 +2,16 @@
 
 ----
 
-Startdate: 05.05.2014
+Date: 07.07.2014
 
 ----
 
-Enddate: 
+Enddate: 10.07.2014
 
 ----
 
-Place: Place
+Place: Museion
+
+----
+
+Link: 

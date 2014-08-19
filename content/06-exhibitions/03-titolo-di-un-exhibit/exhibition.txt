@@ -2,12 +2,16 @@
 
 ----
 
-Startdate: 13.08.2014
+Date: 05.05.2014
 
 ----
 
-Enddate: 21.08.2014
+Enddate: 14.05.2014
 
 ----
 
-Place: Lugo dell mosta
+Place: Luogo della mostra
+
+----
+
+Link: 

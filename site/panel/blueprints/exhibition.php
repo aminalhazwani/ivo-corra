@@ -10,7 +10,7 @@ fields:
         label: Titolo della mostra
         type:  text
         required: true
-    startdate: 
+    date: 
         label: Data di inizio
         type:  date
         format: dd.mm.yy
