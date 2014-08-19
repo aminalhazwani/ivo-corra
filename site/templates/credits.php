@@ -17,16 +17,16 @@
 
         <section class="exhibitions">
             <span class="section__title">Exhibitions</span>
-            <?php foreach($pages->find('/exhibitions')->children()->visible() as $exhibition): ?>
-                <ul class="exhibitions__list">
+            <ul class="exhibitions__list">
+                <?php foreach($pages->find('/exhibitions')->children()->visible()->sortBy($sort='date', $direction='desc') as $exhibition): ?> 
                     <li class="exhibitions__list--item exhibition">
-                        <h4 class="exhibition__title"><?php echo $exhibition->title() ?></h4>
+                        <h4 class="exhibition__title"><?php echo $exhibition->title() ?> &#8211; <?php echo $exhibition->place() ?></h4>
 
                         <span class="exhibition__date">
-                            <?php if(strtotime($exhibition->enddate()) != ''): ?>
-                                <?php echo date('M j', strtotime($exhibition->startdate())) ?> &#8211; <?php echo date('M j, Y', strtotime($exhibition->enddate())) ?>
+                            <?php if($exhibition->enddate() != ''): ?>
+                                <?php echo $exhibition->date('M j') ?> &#8211; <?php echo date('M j, Y', strtotime($exhibition->enddate())) ?>
                             <?php else: ?>
-                                <?php echo date('M j, Y', strtotime($exhibition->startdate())) ?>
+                                <?php echo $exhibition->date('M j, Y') ?>
                             <?php endif ?>
                         </span>
 
@@ -34,8 +34,8 @@
                         <a class="exhibition__link" href="<?php echo $exhibition->link() ?>">link &#8594;</a>
                         <?php endif ?>
                     </li>
-                </ul>
-            <?php endforeach ?>
+                <?php endforeach ?>
+            </ul>
         </section>
 
         <section class="publications">
@@ -44,7 +44,7 @@
                 <?php foreach($pages->find('/publications')->children()->visible() as $publication): ?>
                     <li class="publication">
                         <?php if($publication->hasImages()): ?>
-                        <figure class="">
+                        <figure>
                             <?php foreach($publication->images() as $image): ?>
                                 <a class="box" href="<?php echo $image->url() ?>" data-lightbox="<?php echo ($publication->title()) ?>">
                                     <img src="<?php echo $image->url() ?>" alt="<?php echo ($publication->title()) ?>" />

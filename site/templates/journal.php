@@ -5,7 +5,7 @@
 
 <div class="journal__container">
   <ul class="journal__post-list">
-    <?php foreach($pages->find('/journal')->children()->visible() as $post): ?>
+    <?php foreach($pages->find('/journal')->children()->visible()->sortBy($sort='date', $direction='desc') as $post): ?>
         <li class="journal__post">
           <span class="journal__post--date"><?php echo $post->date('M. j, Y') ?></span>
           <h3 class="journal__post--title"><?php echo $post->title() ?></h3>
