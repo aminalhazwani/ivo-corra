@@ -1,5 +1,5 @@
 ﻿$(window).on("load", function () {
-	if ( $(window).width() > 600 ) {
+	if ( $(window).width() > 768 ) {
 		var min_x = 40;
 		var max_x = ($(window).width() - 400);
 		var min_y = 40;
@@ -42,6 +42,13 @@
 		    return false;
 		}
 	}
+	else {
+		$('.work').addClass('mobile');
+	}
+});
+
+$(window).on("load", function () {
+	$('.work').css({opacity: 1});
 
 	$('.menu__toogle').click(function(){
 	   	$('.menu__toogle').toggleClass('is-open');
@@ -54,4 +61,5 @@
 	   $('.contact__container').toggleClass('is-open');
 	   $('.container').toggleClass('is-hidden');
 	});
+
 });
