@@ -10,4 +10,14 @@
 	}
 ?>
 
+
+<script type="text/javascript">
+    $(function() {
+        $("img.lazy").lazyload({
+            effect : "fadeIn"
+        });
+    });
+</script>
+
+
 <?php snippet('foot') ?>
