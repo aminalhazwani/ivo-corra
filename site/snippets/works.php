@@ -1,15 +1,12 @@
 <div class="container">
-    <?php foreach($data->children()->visible() as $work): ?>
-        <?php $visible = $work->home(); ?>
-        	<?php if($work->hasImages() && $visible == 'ja'): ?>
-                <figure class="work">
-        			<?php foreach($work->images() as $image): ?>
-        			    <a class="box" href="<?php echo $image->url() ?>" data-lightbox="<?php echo ($work->title()) ?>">
-                            <div class="overlay"></div>
-                            <img class="lazy" data-original="<?php echo $image->url() ?>" alt="<?php echo ($work->title()) ?>" />
-                        </a>
-        		    <?php endforeach ?>
-                </figure>
-        	<?php endif ?>
+    <?php foreach($pages->find('/works')->children()->visible() as $work): ?>
+        <?php if($work->home() == 'ja'): ?>
+            <div class="work">   
+                <?php $image = $work->images()->first(); ?>
+                <a href="<?php echo $image->url() ?>" data-lightbox="<?php echo $work->title() ?>">
+                    <img src="<?php echo thumb($image, array('width' => 300), false) ?>" alt="<?php echo $work->title() ?>">
+                </a>
+            </div>
+        <?php endif ?>
     <?php endforeach ?>
 </div>

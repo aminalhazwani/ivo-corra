@@ -61,5 +61,4 @@ $(window).on("load", function () {
 	   $('.contact__container').toggleClass('is-open');
 	   $('.container').toggleClass('is-hidden');
 	});
-
 });

@@ -787,16 +787,8 @@ body:after {
   line-height: 0;
   position: absolute;
   min-width: 100px;
-  max-width: 24%;
+  max-width: 22%;
   opacity: 0;
-}
-
-.work a {
-  display: none;
-}
-
-.work a:first-child {
-  display: block;
 }
 
 .mobile {
@@ -999,12 +991,8 @@ img {
 }
 .related-works__item figure a {
   position: relative;
-  display: none;
   text-decoration: none;
   line-height: 0;
-}
-.related-works__item figure a:first-child {
-  display: block;
 }
 .related-works__item figure img {
   width: auto;
@@ -1026,6 +1014,16 @@ img {
 .related-works__item figure figcaption {
   font-size: small;
   line-height: 2;
+}
+
+.work__thumb {
+  display: none;
+}
+.work__thumb:first-child {
+  display: block;
+}
+.work__lightbox {
+  display: none;
 }
 
 .journal__container {

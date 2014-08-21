@@ -1,15 +1,10 @@
 <?php snippet('head') ?>
 <?php snippet('controls') ?>
-  <h1 class="site__title"><a href="/ivo-corra">Ivo Corrà</a></h1>
+<h1 class="site__title"><a href="/ivo-corra">Ivo Corrà</a></h1>
 <?php snippet('menu') ?>
 <?php snippet('contact') ?>
 
-<?php
-	foreach($pages->visible()->without('about')->without('credit')->without('journal') as $section) {
-	  snippet($section->uid(), array('data' => $section));
-	}
-?>
-
+<?php snippet('works') ?>
 
 <script type="text/javascript">
     $(function() {
@@ -18,6 +13,5 @@
         });
     });
 </script>
-
 
 <?php snippet('foot') ?>
