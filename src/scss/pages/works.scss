@@ -52,14 +52,11 @@
         figure {
             a {
                 position: relative;
-                display: none;
+                // display: none;
                 text-decoration: none;
                 line-height: 0;
-
-                &:first-child {
-                    display: block;
-                }
             }
+
             img {
                 width: auto;
                 @include media-query(lap-and-up) {
@@ -80,5 +77,18 @@
                 line-height: 2;
             }
         }
+    }
+}
+
+.work {
+    @include e(thumb) {
+        display: none;
+        &:first-child {
+            display: block;
+        }
+    }
+
+    @include e(lightbox) {
+        display: none;
     }
 }

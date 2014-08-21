@@ -10,6 +10,7 @@
 
 <div class="works__container">
     <ul class="works__tags--list">
+
         <?php foreach($tags as $tag): ?>
         <li class="tags__list--item">
             <span class="section__title"><?php echo $tag->name() ?></span>
@@ -18,10 +19,13 @@
             $tagname = $tag->name();
             foreach($works->children()->filterBy('tags', $tagname, ',') as $work): ?>
                 <li class="related-works__item">
+                    <?php 
+                        $image = $work->images()->first();
+                    ?>
                     <figure>
-                        <?php foreach($work->images() as $image): ?>
-                            <a href="<?php echo $image->url() ?>" data-lightbox="<?php echo $work->title() ?>">
-                                <img src="<?php echo $image->url() ?>" alt="<?php echo $work->title() ?>">
+                        <?php foreach($work->images() as $imageLightbox): ?>
+                            <a class="work__thumb" href="<?php echo $imageLightbox->url() ?>" data-lightbox="<?php echo $work->title() ?>">
+                                <img src="<?php echo thumb($image, array('height' => 200), false) ?>" alt="<?php echo $work->title() ?>">
                             </a>
                         <?php endforeach ?>
                         <figcaption><?php echo $work->title() ?></figcaption>
@@ -31,6 +35,7 @@
             </ul>
         </li>
         <?php endforeach ?>
+
     </ul>
 </div>
 
