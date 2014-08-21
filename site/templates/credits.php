@@ -18,7 +18,7 @@
         <section class="exhibitions">
             <span class="section__title">Exhibitions</span>
             <ul class="exhibitions__list">
-                <?php foreach($pages->find('/exhibitions')->children()->visible()->sortBy($sort='date', $direction='desc') as $exhibition): ?> 
+                <?php foreach($pages->find('exhibitions')->children()->visible()->sortBy($sort='date', $direction='desc') as $exhibition): ?> 
                     <li class="exhibitions__list--item exhibition">
                         <h4 class="exhibition__title"><?php echo $exhibition->title() ?> &#8211; <?php echo $exhibition->place() ?></h4>
 
@@ -41,7 +41,7 @@
         <section class="publications">
             <span class="section__title">publications</span>
             <ul>
-                <?php foreach($pages->find('/publications')->children()->visible() as $publication): ?>
+                <?php foreach($pages->find('publications')->children()->visible() as $publication): ?>
                     <li class="publication">
                         <?php if($publication->hasImages()): ?>
                         <figure>

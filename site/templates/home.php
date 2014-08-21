@@ -4,7 +4,19 @@
 <?php snippet('menu') ?>
 <?php snippet('contact') ?>
 
-<?php snippet('works') ?>
+<div class="container">
+    <?php foreach($pages->find('works')->children()->visible() as $work): ?>
+        <?php if($work->home() == 'ja'): ?>
+            <div class="work">   
+                <?php foreach($work->images() as $image): ?>
+                    <a href="<?php echo $image->url() ?>" data-lightbox="<?php echo $work->title() ?>">
+                        <img class="lazy" src="<?php echo thumb($image, array('width' => 300), false) ?>" alt="<?php echo $work->title() ?>">
+                    </a>
+                <?php endforeach ?>
+            </div>
+        <?php endif ?>
+    <?php endforeach ?>
+</div>
 
 <script type="text/javascript">
     $(function() {

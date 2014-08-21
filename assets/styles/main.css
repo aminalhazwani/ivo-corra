@@ -791,6 +791,14 @@ body:after {
   opacity: 0;
 }
 
+.work a {
+  display: none;
+}
+
+.work a:first-child {
+  display: block;
+}
+
 .mobile {
   z-index: -99;
   position: relative;
