@@ -5,7 +5,7 @@
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <link rel="icon" type="image/png" href="<?php echo url() ?>/assets/images/favicon.png">
+    <link rel="icon" type="image/png" href="<?php echo url() ?>/assets/images/fav-icon.png">
 
     <?php echo css('assets/styles/main.css') ?>
 
