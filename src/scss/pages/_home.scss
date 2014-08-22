@@ -9,6 +9,14 @@
     max-width: 22%;
 
     opacity: 0;
+
+    @include media-query(tabl) {
+        max-width: 30%;
+    }
+
+    @include media-query(palm) {
+        max-width: 60%;
+    }
 }
 
 .work a {
@@ -17,19 +25,6 @@
 
 .work a:first-child {
     display: block;
-}
-
-.mobile {
-    z-index: -99;
-    position: relative;
-
-    width: 100%;
-    max-width: 100%;
-    margin-bottom: 3rem;
-
-    .overlay {
-        display: none;
-    }
 }
 
 .publication a {
