@@ -16,7 +16,7 @@
       this.fadeDuration                = 0;
       this.fitImagesInViewport         = true;
       this.resizeDuration              = 0;
-      this.positionFromTop             = 50;
+      this.positionFromTop             = 0;
       this.showImageNumberLabel        = true;
       this.alwaysShowNavOnTouchDevices = false;
       this.wrapAround                  = false;
@@ -50,8 +50,11 @@
       var self = this;
       $('body').on('click', 'a[rel^=lightbox], area[rel^=lightbox], a[data-lightbox], area[data-lightbox]', function(event) {
         self.start($(event.currentTarget));
+        $('.lightbox').addClass('open');
+        $("body").css("overflow", "hidden");
         return false;
       });
+
     };
 
     // Build html for the lightbox and the overlay.
@@ -75,12 +78,14 @@
       // Attach event handlers to the newly minted DOM elements
       this.$overlay.hide().on('click', function() {
         self.end();
+        $("body").css("overflow", "auto");
         return false;
       });
 
       this.$lightbox.hide().on('click', function(event) {
         if ($(event.target).attr('id') === 'lightbox') {
           self.end();
+          $("body").css("overflow", "auto");
         }
         return false;
       });
@@ -88,6 +93,7 @@
       this.$outerContainer.on('click', function(event) {
         if ($(event.target).attr('id') === 'lightbox') {
           self.end();
+          $("body").css("overflow", "auto");
         }
         return false;
       });
@@ -112,6 +118,8 @@
 
       this.$lightbox.find('.lb-loader, .lb-close').on('click', function() {
         self.end();
+        $('.lightbox').removeClass('open');
+        $("body").css("overflow", "auto");
         return false;
       });
     };
@@ -171,7 +179,7 @@
       var top  = $window.scrollTop() + this.options.positionFromTop;
       var left = $window.scrollLeft();
       this.$lightbox.css({
-        top: top + 'px',
+        top: 'calc(' + top + 'px + 50%)',
         left: left + 'px'
       }).fadeIn(this.options.fadeDuration);
 
@@ -373,6 +381,9 @@
       var key     = String.fromCharCode(keycode).toLowerCase();
       if (keycode === KEYCODE_ESC || key.match(/x|o|c/)) {
         this.end();
+        $('.lightbox').removeClass('open');
+        $("body").css("overflow", "auto");
+        return false;
       } else if (key === 'p' || keycode === KEYCODE_LEFTARROW) {
         if (this.currentImageIndex !== 0) {
           this.changeImage(this.currentImageIndex - 1);
