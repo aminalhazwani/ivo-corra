@@ -53,12 +53,16 @@
 
             img {
                 width: auto;
+                min-height: 200px;
+
+                background-image: url(../images/spinner.gif);
+                background-position: 50% 50%;
+                background-size: 50px 50px;
+                background-repeat: no-repeat;
+
                 @include media-query(lap-and-up) {
                     max-height: 200px;
-                }
-
-                &:hover {
-                    opacity: 0.2;
+                    min-width: 300px;
                 }
             }
             figcaption {
@@ -74,6 +78,13 @@
         display: none;
         &:first-child {
             display: block;
+            min-height: 200px;
+
+            background-color: #000;
+            background-image: url(../images/spinner.gif);
+            background-position: 50% 50%;
+            background-size: 50px 50px;
+            background-repeat: no-repeat;
         }
     }
 

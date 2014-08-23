@@ -25,7 +25,7 @@
                     <figure>
                         <?php foreach($work->images() as $imageLightbox): ?>
                             <a class="work__thumb" href="<?php echo $imageLightbox->url() ?>" data-lightbox="<?php echo $work->title() ?>">
-                                <img src="<?php echo thumb($image, array('height' => 200), false) ?>" alt="<?php echo $work->title() ?>">
+                                <img src="<?php echo thumb($image, array('height' => 200), false) ?>">
                             </a>
                         <?php endforeach ?>
                         <figcaption><?php echo $work->title() ?></figcaption>

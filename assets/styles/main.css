@@ -274,6 +274,7 @@ body {
 }
 @media only screen and (max-width: 767px) {
   .site__title {
+    z-index: 5;
     top: 0;
     -webkit-transform: translateY(0);
         -ms-transform: translateY(0);
@@ -303,6 +304,7 @@ body {
 }
 @media only screen and (max-width: 767px) {
   .menu__toogle {
+    z-index: 6;
     top: 0;
     -webkit-transform: translateY(0);
         -ms-transform: translateY(0);
@@ -405,6 +407,7 @@ body {
 }
 @media only screen and (max-width: 767px) {
   .contact__toogle {
+    z-index: 6;
     top: 0;
     -webkit-transform: translateY(0);
         -ms-transform: translateY(0);
@@ -666,9 +669,15 @@ body:after {
   left: 0;
 }
 
+.lb-container {
+  background-image: url(../images/spinner.gif);
+  background-position: 50% 50%;
+  background-size: 50px 50px;
+  background-repeat: no-repeat;
+}
+
 .lb-nav a {
   outline: none;
-  background-image: url("data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==");
 }
 
 .lb-prev, .lb-next {
@@ -681,7 +690,7 @@ body:after {
   width: 50%;
   left: 0;
   float: left;
-  background: url(../images/prev.png) left 48% no-repeat;
+  background: url(../images/prev.png) left 50% no-repeat;
   background-size: 100px 100px;
   background-position-x: 5%;
   opacity: 0;
@@ -701,7 +710,7 @@ body:after {
   width: 50%;
   right: 0;
   float: right;
-  background: url(../images/next.png) right 48% no-repeat;
+  background: url(../images/next.png) right 50% no-repeat;
   background-size: 100px 100px;
   background-position-x: 95%;
   opacity: 0;
@@ -783,86 +792,6 @@ body:after {
   opacity: 1;
 }
 
-/* Make clicks pass-through */
-#nprogress {
-  pointer-events: none;
-}
-
-#nprogress .bar {
-  background: #000;
-  position: fixed;
-  z-index: 1031;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 5px;
-}
-
-/* Fancy blur effect */
-#nprogress .peg {
-  display: block;
-  position: absolute;
-  right: 0px;
-  width: 100px;
-  height: 100%;
-  opacity: 1.0;
-  -webkit-transform: rotate(3deg) translate(0px, -4px);
-  -ms-transform: rotate(3deg) translate(0px, -4px);
-  transform: rotate(3deg) translate(0px, -4px);
-}
-
-/* Remove these to get rid of the spinner */
-#nprogress .spinner {
-  display: block;
-  position: fixed;
-  z-index: 1031;
-  top: 15px;
-  right: 15px;
-}
-
-#nprogress .spinner-icon {
-  width: 18px;
-  height: 18px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border: solid 2px transparent;
-  border-top-color: #29d;
-  border-left-color: #29d;
-  border-radius: 50%;
-  -webkit-animation: nprogress-spinner 400ms linear infinite;
-  animation: nprogress-spinner 400ms linear infinite;
-}
-
-.nprogress-custom-parent {
-  overflow: hidden;
-  position: relative;
-}
-
-.nprogress-custom-parent #nprogress .spinner,
-.nprogress-custom-parent #nprogress .bar {
-  position: absolute;
-}
-
-@-webkit-keyframes nprogress-spinner {
-  0% {
-    -webkit-transform: rotate(0deg);
-  }
-
-  100% {
-    -webkit-transform: rotate(360deg);
-  }
-}
-@keyframes nprogress-spinner {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
 .work {
   z-index: 3;
   background-color: #fff;
@@ -906,10 +835,6 @@ img {
 .box:hover > .overlay {
   opacity: 1;
   background-size: 8rem;
-}
-
-.box:hover > img {
-  opacity: 0.2;
 }
 
 .about__container {
@@ -1079,14 +1004,17 @@ img {
 }
 .related-works__item figure img {
   width: auto;
+  min-height: 200px;
+  background-image: url(../images/spinner.gif);
+  background-position: 50% 50%;
+  background-size: 50px 50px;
+  background-repeat: no-repeat;
 }
 @media only screen and (min-width: 768px) {
   .related-works__item figure img {
     max-height: 200px;
+    min-width: 300px;
   }
-}
-.related-works__item figure img:hover {
-  opacity: 0.2;
 }
 .related-works__item figure figcaption {
   font-size: small;
@@ -1098,6 +1026,12 @@ img {
 }
 .work__thumb:first-child {
   display: block;
+  min-height: 200px;
+  background-color: #000;
+  background-image: url(../images/spinner.gif);
+  background-position: 50% 50%;
+  background-size: 50px 50px;
+  background-repeat: no-repeat;
 }
 .work__lightbox {
   display: none;
@@ -1164,4 +1098,9 @@ img {
   background-repeat: no-repeat;
   background-position: 50% 50%;
   z-index: 1;
+}
+@media only screen and (max-width: 767px) {
+  .overlay {
+    display: none;
+  }
 }

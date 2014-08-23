@@ -84,9 +84,15 @@ body:after {
   left: 0;
 }
 
+.lb-container {
+  background-image: url(../images/spinner.gif);
+  background-position: 50% 50%;
+  background-size: 50px 50px;
+  background-repeat: no-repeat;
+}
+
 .lb-nav a {
   outline: none;
-  background-image: url('data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==');
 }
 
 .lb-prev, .lb-next {
@@ -99,7 +105,7 @@ body:after {
   width: 50%;
   left: 0;
   float: left;
-  background: url(../images/prev.png) left 48% no-repeat;
+  background: url(../images/prev.png) left 50% no-repeat;
   background-size: 100px 100px;
   background-position-x: 5%;
   opacity: 0;
@@ -117,7 +123,7 @@ body:after {
   width: 50%;
   right: 0;
   float: right;
-  background: url(../images/next.png) right 48% no-repeat;
+  background: url(../images/next.png) right 50% no-repeat;
   background-size: 100px 100px;
   background-position-x: 95%;
   opacity: 0;

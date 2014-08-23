@@ -6,6 +6,7 @@
     top: 50%;
     transform: translateY(-50%);
     @include media-query(tabl-and-down) {
+      z-index: 5;
       top: 0;
       transform: translateY(0);
 
@@ -48,6 +49,7 @@
     cursor: pointer;
 
     @include media-query(tabl-and-down) {
+      z-index: 6;
       top: 0;
       transform: translateY(0);
       
@@ -167,6 +169,7 @@
     }
 
     @include media-query(tabl-and-down) {
+      z-index: 6;
       top: 0;
       transform: translateY(0);
 
