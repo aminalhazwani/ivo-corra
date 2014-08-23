@@ -518,6 +518,19 @@ body {
           transform: rotate(-10deg);
 }
 
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width: 321px) {
+  .menu__container--list li > a {
+    font-size: 2rem;
+    margin: 0.5rem;
+  }
+
+  .active {
+    -webkit-transform: rotate(-5deg);
+        -ms-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
+}
 .contact__container {
   position: fixed;
   z-index: 99;
@@ -586,7 +599,7 @@ body {
 
 /* Preload images */
 body:after {
-  content: url(../images/close.png) url(../images/loading.gif) url(../images/prev.png) url(../images/next.png);
+  content: url(../images/close.png) url(../images/spinner.gif) url(../images/prev.png) url(../images/next.png);
   display: none;
 }
 
@@ -600,7 +613,7 @@ body:after {
 }
 
 .lightbox {
-  position: absolute;
+  position: fixed;
   left: 0;
   width: 100%;
   z-index: 10000;
@@ -1013,7 +1026,6 @@ img {
 @media only screen and (min-width: 768px) {
   .related-works__item figure img {
     max-height: 200px;
-    min-width: 300px;
   }
 }
 .related-works__item figure figcaption {
