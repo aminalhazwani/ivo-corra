@@ -1,6 +1,6 @@
 /* Preload images */
 body:after {
-  content: url(../images/close.png) url(../images/loading.gif) url(../images/prev.png) url(../images/next.png);
+  content: url(../images/close.png) url(../images/spinner.gif) url(../images/prev.png) url(../images/next.png);
   display: none;
 }
 
@@ -14,7 +14,7 @@ body:after {
 }
 
 .lightbox {
-  position: absolute;
+  position: fixed;
   left: 0;
   width: 100%;
   z-index: 10000;
@@ -67,7 +67,7 @@ body:after {
   width: 32px;
   height: 32px;
   margin: 0 auto;
-  //background: url(../images/loading.gif) no-repeat;
+  //background: url(../images/spinner.gif) no-repeat;
   background: none;
 }
 
