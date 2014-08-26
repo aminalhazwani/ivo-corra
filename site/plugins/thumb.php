@@ -25,7 +25,6 @@ class thumb {
   var $alt = false;
   var $crop = false;
   var $grayscale = false;
-  var $datauri = false;
 
   function __construct($image, $options=array()) {
 
@@ -48,20 +47,17 @@ class thumb {
     $this->maxWidth     = @$options['width'];
     $this->maxHeight    = @$options['height'];
 
-    // set crop on/off
+    // set the quality
     $this->crop = @$options['crop'];
     
-    // set greyscale on/off
+    // set the quality
     $this->grayscale = @$options['grayscale'];
-    
+  
     // set the quality
     $this->quality = a::get($options, 'quality', c::get('thumb.quality', 100));
 
     // set the default upscale behavior
     $this->upscale = a::get($options, 'upscale', c::get('thumb.upscale', false));
-    
-    // set datauri on/off
-    $this->datauri = a::get($options, 'datauri', c::get('thumb.datauri', false));
 
     // set the alt text
     $this->alt = a::get($options, 'alt', $this->obj->name());
@@ -107,11 +103,7 @@ class thumb {
   }
 
   function url() {
-    if($this->datauri == true) {
-      return (error($this->status)) ? $this->obj->url() : 'data:' . $this->mime . ';base64,' . base64_encode(file_get_contents($this->file()));
-    } else {
-      return (error($this->status)) ? $this->obj->url() : $this->url . '/' . $this->filename() . '?' . filemtime($this->file());
-    }
+    return (error($this->status)) ? $this->obj->url() : $this->url . '/' . $this->filename() . '?' . filemtime($this->file());
   }
   
   function size() {
@@ -260,9 +252,9 @@ class thumb {
       imagecopyresampled($thumb, $image, 0, 0, 0, 0, $this->width, $this->height, $this->sourceWidth, $this->sourceHeight); 
     }    
 
-    if($this->grayscale == true) {
-        imagefilter($thumb, IMG_FILTER_GRAYSCALE);
-    }
+  if($this->grayscale == true) {
+    imagefilter($thumb, IMG_FILTER_GRAYSCALE);
+  }
     
     switch($this->mime) {
       case 'image/jpeg': imagejpeg($thumb, $file, $this->quality); break;
