@@ -93,28 +93,29 @@ class user extends obj {
     if(empty($password) || empty($user['password'])) return false;
 
     // get the encryption
-    $hash = a::get($user, 'encrypt', false);
-    
+    $encryption = a::get($user, 'encrypt', false);
+        
     // handle the different 
     // encryption types        
-    switch($hash) {
-      case 'bcrypt':
-        $salt = a::get($user, 'salt', '');
-        return password_verify($password . $salt, $user['password']);
-      // sha1 hash
+    switch($encryption) {
+      // sha1 encoded
       case 'sha1':
-        return sha1($password) == $user['password'];
-      // md5 hash
+        return (sha1($password) == $user['password']) ? true : false;
+        break;
+      // md5 encoded
       case 'md5':
-        return md5($password) == $user['password'];
-      // plaintext password
+        return (md5($password) == $user['password']) ? true : false;
+        break;
+      // plain passwords
       default:
-        return $password == $user['password'];
+        return ($password == $user['password']) ? true : false;
+        break;    
     }    
     
     // we should never get here
     // but let's make sure
     return false;
+
 	}
 	
 	function logout() {

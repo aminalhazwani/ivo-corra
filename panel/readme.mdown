@@ -9,7 +9,7 @@ Easy to setup, easy to use, flexible as hell.
 
 <http://getkirby.com>
 
-Follow @getkirby on Twitter for updates: <http://twitter.com/getkirby>
+Follow @getkirby on Twitter for updates: http://twitter.com/getkirby
 
 ## Requirements
 
