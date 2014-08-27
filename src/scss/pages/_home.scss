@@ -6,16 +6,16 @@
 
     position: absolute;
     min-width: 100px;
-    max-width: 22%;
+    max-width: 15%;
 
     opacity: 0;
 
     @include media-query(tabl) {
-        max-width: 30%;
+        max-width: 20%;
     }
 
     @include media-query(palm) {
-        max-width: 60%;
+        max-width: 30%;
     }
 }
 

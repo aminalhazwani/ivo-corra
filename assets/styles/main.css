@@ -811,17 +811,17 @@ body:after {
   line-height: 0;
   position: absolute;
   min-width: 100px;
-  max-width: 22%;
+  max-width: 15%;
   opacity: 0;
 }
 @media only screen and (min-width: 481px) and (max-width: 767px) {
   .work {
-    max-width: 30%;
+    max-width: 20%;
   }
 }
 @media only screen and (max-width: 480px) {
   .work {
-    max-width: 60%;
+    max-width: 30%;
   }
 }
 
