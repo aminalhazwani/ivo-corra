@@ -3,7 +3,7 @@
 # works blueprint
 
 title: Page
-pages: true
+pages: false
 files: true
 fields:
     title: 
