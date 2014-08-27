@@ -21,3 +21,12 @@ c::set('upload.allowed', array(
   'application/gzip',
   'application/zip',
 ));
+
+// exclude these templates
+c::set('templates.exluded', array(
+    'default',
+    'about',
+    'credits',
+    'home',
+    'works'
+));

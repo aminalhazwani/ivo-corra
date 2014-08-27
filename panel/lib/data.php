@@ -750,7 +750,8 @@ class data {
         $name = f::name($file);
 
         // check if it is valid or already there.
-        if(empty($name) || in_array($name, $templates)) continue;
+        //if(empty($name) || in_array($name, $templates)) continue;
+        if(empty($name) || in_array($name, $templates) || in_array($name, c::get('templates.exluded'))) continue;
 
         // add it to the list of templates
         $templates[] = $name;            
