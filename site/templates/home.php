@@ -1,7 +1,7 @@
 <?php snippet('head') ?>
 
 <?php snippet('controls') ?>
-<h1 class="site__title"><a href="/ivo-corra">Ivo Corrà</a></h1>
+<h1 class="site__title"><a href="<?php echo url() ?>">Ivo Corrà</a></h1>
 <?php snippet('menu') ?>
 <?php snippet('contact') ?>
 
