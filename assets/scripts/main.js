@@ -1,17 +1,25 @@
 ﻿$(window).on("load", function () {
 	if ( $(window).width() >= 768 ) {
-		var max_x = ($(window).width() - 400);
-		var max_y = 9000;
+		var max_x = ($(window).width() - 0);
+		var max_y = $('.work').length*600;//9000;
+		var min_x = 200;
+	}
+	if ( $(window).width() >= 480 ){
+		var max_x = ($(window).width() - 100);
+		var max_y = $('.work').length*150;//6000;
+		var min_x = 200;
 	}
 	else {
-		var max_x = ($(window).width() - 200);
-		var max_y = 6000;
+		var max_x = $(window).width();
+		var max_y = $('.work').length*150;//6000;
+		var min_x = 100;
 	}
-	var min_x = 40;
-	var min_y = 40;
+
+	var min_y = 0;
 	var filled_areas = new Array();
 
 	$('.work').each(function() {
+		console.log("calculating");
 	    var rand_x=0;
 	    var rand_y=0;
 	    var area;
@@ -19,11 +27,12 @@
 	        rand_x = Math.round(min_x + ((max_x - min_x)*(Math.random() % 1)));
 	        rand_y = Math.round(min_y + ((max_y - min_y)*(Math.random() % 1)));
 	        area = {x: rand_x, y: rand_y, width: $(this).width(), height: $(this).height()};
+	    	console.log(".");
 	    } while(check_overlap(area));
 
 	    filled_areas.push(area);
 
-	    $(this).css({left:rand_x, top: rand_y});
+	    $(this).css({left:pixel2percentage(rand_x)+"%", top: rand_y});
 	});
 
 	function check_overlap(area) {
@@ -46,6 +55,12 @@
 	    }
 	    return false;
 	}
+
+	function pixel2percentage(pixel){
+		var width = window.innerWidth;
+		return percentage = 100 * ( width - pixel ) / width
+	}
+
 });
 
 $(window).on("load", function () {
@@ -71,4 +86,3 @@ $(window).on("resize", function () {
         return false;
   	};
 });
-
