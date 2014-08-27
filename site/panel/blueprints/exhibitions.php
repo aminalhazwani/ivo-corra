@@ -3,7 +3,8 @@
 # default blueprint
 
 title: Page
-pages: true
+pages: 
+    template: exhibition
 files: false
 fields:
     title: 

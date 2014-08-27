@@ -3,7 +3,8 @@
 # journal blueprint
 
 title: Page
-pages: true
+pages: 
+    template: journal
 files: false
 fields:
     title: 

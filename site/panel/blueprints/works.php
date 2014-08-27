@@ -3,7 +3,8 @@
 # works blueprint
 
 title: Page
-pages: true
+pages: 
+    template: work
 files: true
 fields:
     title: 

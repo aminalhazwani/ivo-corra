@@ -3,7 +3,8 @@
 # default blueprint
 
 title: Page
-pages: true
+pages: 
+    template: publication
 files: false
 fields:
     title: 
