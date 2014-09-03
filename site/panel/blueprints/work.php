@@ -17,3 +17,7 @@ fields:
     tags: 
         label: Categoria
         type: tags
+filefields: 
+    caption: 
+        label: Titolo foto
+        type:  text
