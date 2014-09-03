@@ -9,13 +9,11 @@ fields:
     title: 
         label: Titolo progetto
         type:  text
+    text: 
+        label: Testo del progetto
+        type:  textarea
+        size:  large
+        buttons: true
     tags: 
         label: Categoria
         type: tags
-    home: 
-        label: Lavoro in homepage
-        type: radio
-        options:
-            ja:  Inserisci
-            nein: Non inserisci
-        default: ja
