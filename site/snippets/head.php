@@ -13,6 +13,7 @@
     <?php echo css('assets/styles/main.css') ?>
 
     <?php echo js('assets/scripts/vendor/jquery-1.11.0.min.js') ?>
+    <?php echo js('assets/scripts/vendor/hammer.min.js') ?>
     <?php echo js('assets/scripts/vendor/lightbox.js') ?>
     <?php echo js('assets/scripts/vendor/flowtype.js') ?>
     <?php echo js('assets/scripts/main.js') ?>

@@ -116,6 +116,23 @@
         return false;
       });
 
+      Hammer(this.$lightbox.get(0)).on('swipeleft', function() {
+        if (self.currentImageIndex === self.album.length - 1) {
+          self.changeImage(0);
+        } else {
+          self.changeImage(self.currentImageIndex + 1);
+        }
+        return false;
+      });
+      Hammer(this.$lightbox.get(0)).on('swiperight', function() {
+        if (self.currentImageIndex === 0) {
+          self.changeImage(self.album.length - 1);
+        } else {
+          self.changeImage(self.currentImageIndex - 1);
+        }
+        return false;
+      });
+
       this.$lightbox.find('.lb-loader, .lb-close').on('click', function() {
         self.end();
         $('.lightbox').removeClass('open');
