@@ -1,7 +1,28 @@
 .about__container {
     @include container;
 
-    p:first-child {
-        margin-top: 0;
+    p {
+        &:first-child {
+            margin-top: 0;
+            &:before {
+                content: "";
+                margin: 0;
+            }
+        }
+        &:before {
+            content: " ";
+            margin: 0 1rem 0 3rem;
+            @include media-query(palm) {
+                margin: 0 0 0 3rem;
+            }
+        }
     }
+}
+
+.dot__container {
+    margin-top: 3rem;
+    height: 100px;
+    background: url(../images/dotdot.png);
+    background-size: 20px 20px;
+    background-repeat: space;
 }

@@ -5,6 +5,8 @@
 
 <div class="about__container">
     <?php echo markdown($page->bio()) ?>
+
+    <div class="dot__container"></div>
 </div>
 
 <script type="text/javascript">
