@@ -6,4 +6,4 @@ Home: ja
 
 ----
 
-Tags: personal
+Tags: personal,new
