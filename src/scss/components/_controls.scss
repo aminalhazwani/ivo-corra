@@ -2,7 +2,7 @@
 .site {
   @include e(title) {
     position: fixed;
-    z-index: 5;
+    z-index: -1;
     top: 50%;
     transform: translateY(-50%);
     @include media-query(tabl-and-down) {
@@ -19,7 +19,7 @@
 
     text-align: center;
     text-transform: uppercase;
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 400;
     letter-spacing: 1rem;
 
@@ -42,8 +42,8 @@
     left: 0;
     transform: translateY(-50%);
 
-    width: 3rem;
-    height: 3rem;
+    width: 2.5rem;
+    height: 2.5rem;
     margin-left: 2rem;
 
     cursor: pointer;
@@ -58,7 +58,7 @@
 
     @include media-query(palm) {
       top: auto;
-      bottom: 0;
+      bottom: 8px;
     }
   }
 }
@@ -70,12 +70,13 @@
       position: absolute;
       display: block;
 
-      width: 3rem;
-      height: 0.25rem;
-      margin-top: 1.5rem;
+      width: 2.5rem;
+      height: 0.2rem;
+      margin-top: 1rem;
       @include media-query(tabl-and-down) {
         width: 2rem;
         height: 0.15rem;
+        margin-top: 1.5rem;
       }
 
       background-color: $black;
@@ -84,10 +85,10 @@
       &:after {
         position: absolute;
         display: block;
-        bottom: 0.75rem;
+        bottom: 0.62rem;
 
-        width: 3rem;
-        height: 0.25rem;
+        width: 2.5rem;
+        height: 0.2rem;
         @include media-query(tabl-and-down) {
           bottom: 0.5rem;
 
@@ -102,10 +103,10 @@
       &:before {
         position: absolute;
         display: block;
-        top: 0.75rem;
+        top: 0.6rem;
 
-        width: 3rem;
-        height: 0.25rem;
+        width: 2.5rem;
+        height: 0.2rem;
         @include media-query(tabl-and-down) {
           top: 0.5rem;
 
@@ -159,7 +160,7 @@
 
     width: 3rem;
 
-    font-size: 3rem;
+    font-size: 2.5rem;
     cursor: pointer;
 
     @include m(icon) {
@@ -193,7 +194,7 @@
       z-index: 999;
       right: 0;
 
-      height: 3rem;
+      height: 2.5rem;
       margin-right: 1rem;
 
       span {
@@ -202,15 +203,16 @@
           display: block;
           transform: rotate(-45deg);
           opacity: 1;
-          top: 1.5rem;
+          top: 1rem;
 
-          width: 3rem;
-          height: 0.25rem;
+          width: 2.5rem;
+          height: 0.2rem;
 
           background-color: $black;
           content: " ";
 
           @include media-query(tabl-and-down) {
+            top: 1.5rem;
             width: 2rem;
             height: 0.15rem;
           }
@@ -221,15 +223,16 @@
           display: block;
           transform: rotate(45deg);
           opacity: 1;
-          top: 1.5rem;
+          top: 1rem;
 
-          width: 3rem;
-          height: 0.25rem;
+          width: 2.5rem;
+          height: 0.2rem;
 
           background-color: $black;
           content: " ";
 
           @include media-query(tabl-and-down) {
+            top: 1.5rem;
             width: 2rem;
             height: 0.15rem;
           }
