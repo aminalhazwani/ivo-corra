@@ -19,7 +19,7 @@
 
     <div class="contact__container--colophone">
       <a href="http://aminalhazwani.github.io">
-        <span class="pile-of-poo">Made with</span><span>in Italy</span>
+        <span class="pile-of-poo">Made with &#9829; in Italy</span>
       </a>
     </div>
   </div>
