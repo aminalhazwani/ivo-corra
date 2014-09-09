@@ -1,6 +1,7 @@
 .works {
     @include e(container) {
         @include container;
+        padding-top: 0;
     }
 
     @include e(tags) {
@@ -9,6 +10,19 @@
             padding: 0;
 
             list-style-type: none;
+        }
+    }
+
+    @include e(new) {
+        margin: 5rem auto 4rem auto;
+        padding: 2rem 2rem 1rem 2rem;
+        border: 0.2rem solid #000;
+        max-width: 70%;
+
+        @include media-query(tabl-and-down) {
+            padding: 1rem;
+            max-width: 80%;
+            margin: 5rem auto 4rem auto;
         }
     }
 }
@@ -40,6 +54,8 @@
         padding: 0;
         list-style-type: none;
 
+        max-width: 100%;
+
         &:last-child {
             margin-right: 0;
         }
@@ -52,17 +68,11 @@
             }
 
             img {
-                width: auto;
-                min-height: 200px;
-
                 background-image: url(../images/spinner.gif);
                 background-position: 50% 50%;
                 background-size: 50px 50px;
                 background-repeat: no-repeat;
 
-                @include media-query(lap-and-up) {
-                    max-height: 200px;
-                }
             }
             figcaption {
                 font-size: small;
@@ -77,13 +87,16 @@
         display: none;
         &:first-child {
             display: block;
-            min-height: 200px;
 
             background-color: #000;
             background-image: url(../images/spinner.gif);
             background-position: 50% 50%;
             background-size: 50px 50px;
             background-repeat: no-repeat;
+
+            @include media-query(palm) {
+                 max-width: 90%;
+            }
         }
     }
 
