@@ -156,9 +156,12 @@ body:after {
 }
 
 .lb-data .lb-caption {
-  font-size: 13px;
+  font-size: 1rem;
   font-weight: bold;
   line-height: 1em;
+  @include media-query (palm) {
+    font-size: 0.85rem;
+  }
 }
 
 .lb-data .lb-number {
