@@ -163,6 +163,7 @@
                 }
                 p {
                     margin: 0 2rem 2rem 2rem;
+                    line-height: 1.5;
                     @include media-query(palm) {
                         margin: 0 1rem 1rem 1rem;
                     }
