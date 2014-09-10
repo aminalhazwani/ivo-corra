@@ -98,6 +98,8 @@ body:after {
   height: 100%;
   cursor: pointer;
   display: none;
+  opacity: 1;
+  transition: opacity 0.5s linear;
 }
 
 .lb-nav a.lb-prev {
@@ -130,7 +132,6 @@ body:after {
 
 .lb-dataContainer {
   margin: 0 auto;
-  padding-top: 5px;
   *zoom: 1;
   width: 100%;
 }
@@ -149,9 +150,9 @@ body:after {
 
 .lb-data .lb-details {
   display: block;
-  width: 85%;
+  width: 100%;
   float: left;
-  text-align: left;
+  text-align: center;
   line-height: 1;
 }
 
@@ -172,7 +173,32 @@ body:after {
   color: #999999;
 }
 
-.lb-close, .lb-data {
+.lb-info {
+  position: fixed;
+  z-index: 999999;
+  right: 60px;
+  top: 7px;
+  display: block;
+  border: 3px solid $white;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  &:after {
+    color: #fff;
+    content: "i";
+    line-height: 30px;
+  }
+}
+
+.lb-closeContainer {
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  width: 30px;
+}
+
+.lb-close, .lb-data{
   display: block;
   outline: none;
   height: 30px
@@ -184,6 +210,8 @@ body:after {
   background-size: contain;
   background-position: top right;
   background-repeat: no-repeat;
+
+  cursor: pointer;
 }
 
 .lb-data .lb-close:hover {
