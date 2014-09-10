@@ -682,6 +682,9 @@ body:after {
   height: 100%;
   cursor: pointer;
   display: none;
+  opacity: 1;
+  -webkit-transition: opacity 0.5s linear;
+          transition: opacity 0.5s linear;
 }
 
 .lb-nav a.lb-prev {
@@ -714,7 +717,6 @@ body:after {
 
 .lb-dataContainer {
   margin: 0 auto;
-  padding-top: 5px;
   *zoom: 1;
   width: 100%;
 }
@@ -733,9 +735,9 @@ body:after {
 
 .lb-data .lb-details {
   display: block;
-  width: 85%;
+  width: 100%;
   float: left;
-  text-align: left;
+  text-align: center;
   line-height: 1;
 }
 
@@ -758,6 +760,31 @@ body:after {
   color: #999999;
 }
 
+.lb-info {
+  position: fixed;
+  z-index: 999999;
+  right: 60px;
+  top: 7px;
+  display: block;
+  border: 3px solid white;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+}
+.lb-info:after {
+  color: #fff;
+  content: "i";
+  line-height: 30px;
+}
+
+.lb-closeContainer {
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  width: 30px;
+}
+
 .lb-close, .lb-data {
   display: block;
   outline: none;
@@ -770,6 +797,7 @@ body:after {
   background-size: contain;
   background-position: top right;
   background-repeat: no-repeat;
+  cursor: pointer;
 }
 
 .lb-data .lb-close:hover {
@@ -1028,7 +1056,7 @@ img {
   padding: 5% 0;
   overflow: hidden;
   background-color: white;
-  padding-top: 0;
+  padding-top: 4rem;
 }
 @media only screen and (min-width: 481px) and (max-width: 767px) {
   .works__container {
@@ -1048,14 +1076,15 @@ img {
   list-style-type: none;
 }
 .works__new {
-  margin: 5rem auto 4rem auto;
+  margin: 5rem auto 0 auto;
   padding: 2rem 2rem 1rem 2rem;
   border: 0.2rem solid #000;
   max-width: 70%;
+  background-color: white;
 }
 @media only screen and (max-width: 767px) {
   .works__new {
-    padding: 1rem;
+    padding: 1rem 1rem 0 1rem;
     max-width: 80%;
     margin: 5rem auto 4rem auto;
   }
@@ -1115,6 +1144,21 @@ img {
 }
 .work__lightbox {
   display: none;
+}
+.work__description {
+  display: none;
+  z-index: 99999;
+  position: fixed;
+  background-color: white;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 70%;
+  height: 50%;
+}
+.work__description.is-open {
+  display: block;
 }
 
 .journal__container {

@@ -1,7 +1,7 @@
 .works {
     @include e(container) {
         @include container;
-        padding-top: 0;
+        padding-top: 4rem;
     }
 
     @include e(tags) {
@@ -14,13 +14,15 @@
     }
 
     @include e(new) {
-        margin: 5rem auto 4rem auto;
+        margin: 5rem auto 0 auto;
         padding: 2rem 2rem 1rem 2rem;
         border: 0.2rem solid #000;
         max-width: 70%;
 
+        background-color: $white;
+
         @include media-query(tabl-and-down) {
-            padding: 1rem;
+            padding: 1rem 1rem 0 1rem;
             max-width: 80%;
             margin: 5rem auto 4rem auto;
         }
@@ -102,5 +104,22 @@
 
     @include e(lightbox) {
         display: none;
+    }
+
+    @include e(description) {
+        display: none;
+        z-index: 99999;
+        position: fixed;
+        background-color: $white;
+
+        top: 50%;
+        transform: translateY(-50%);
+
+        width: 70%;
+        height: 50%;
+
+        &.is-open {
+            display: block;
+        }
     }
 }
