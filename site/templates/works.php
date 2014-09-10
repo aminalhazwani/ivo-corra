@@ -18,10 +18,8 @@
             $tagname = $tag->name();
             foreach($works->children()->filterBy('tags', $tagname, ',') as $work): ?>
                 <li class="related-works__item">
-                    <?php 
-                        $image = $work->images()->first();
-                    ?>
-                    <figure>
+                    <?php $image = $work->images()->first(); ?>
+                    <figure class="work__element">
                         <?php foreach($work->images() as $imageLightbox): ?>
                             <a class="work__thumb" href="<?php echo $imageLightbox->url() ?>" data-lightbox="<?php echo $work->title() ?>" data-title="<?php echo $imageLightbox->caption() ?>">
                                 <img src="<?php echo thumb($image, array('height' => 200), false) ?>">
@@ -36,8 +34,8 @@
                                 <div class="work__info--content">
                                     <h2><?php echo $work->title() ?></h2>
                                     <p><?php echo $work->text() ?></p>
-                                </div
-                                 <a class="work__info--close" href="#"></a>
+                                </div>
+                                <a class="work__info--close" href="#"></a>
                             </div>
                         </div>
                     <?php endif ?>
@@ -59,9 +57,7 @@
                 $tagname = $tag->name();
                 foreach($works->children()->filterBy('tags', $tagname, ',') as $work): ?>
                     <li class="related-works__item">
-                        <?php 
-                            $image = $work->images()->first();
-                        ?>
+                        <?php $image = $work->images()->first(); ?>
                         <figure class="work__element">
                             <?php foreach($work->images() as $imageLightbox): ?>
                                 <a class="work__thumb" href="<?php echo $imageLightbox->url() ?>" data-lightbox="<?php echo $work->title() ?>" data-title="<?php echo $imageLightbox->caption() ?>">
