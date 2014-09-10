@@ -23,7 +23,6 @@ fields:
         label: Testo del progetto
         type:  textarea
         size:  large
-        buttons: true
 filefields: 
     caption: 
         label: Didascalia foto
