@@ -100,6 +100,9 @@ body:after {
   display: none;
   opacity: 1;
   transition: opacity 0.5s linear;
+  &.activated {
+    opacity: 0;
+  }
 }
 
 .lb-nav a.lb-prev {
@@ -109,12 +112,8 @@ body:after {
   background: url(../images/prev.png) left 50% no-repeat;
   background-size: 50px 50px;
   background-position-x: 5%;
-  opacity: 1;
 }
 
-.lb-nav a.lb-prev:hover {
-  opacity: 1;
-}
 
 .lb-nav a.lb-next {
   width: 50%;
@@ -123,11 +122,6 @@ body:after {
   background: url(../images/next.png) right 50% no-repeat;
   background-size: 50px 50px;
   background-position-x: 95%;
-  opacity: 1;
-}
-
-.lb-nav a.lb-next:hover {
-  opacity: 1;
 }
 
 .lb-dataContainer {

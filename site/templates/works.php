@@ -29,6 +29,18 @@
                         <?php endforeach ?>
                         <figcaption><?php echo $work->title() ?></figcaption>
                     </figure>
+                    <?php if($work->text() != ''): ?>
+                        <div class="work__info">
+                            <a class="work__info--button" href="#">i</a>
+                            <div class="work__info--description">
+                                <div class="work__info--content">
+                                    <h2><?php echo $work->title() ?></h2>
+                                    <p><?php echo $work->text() ?></p>
+                                </div
+                                 <a class="work__info--close" href="#"></a>
+                            </div>
+                        </div>
+                    <?php endif ?>
                 </li><!--
             --><?php endforeach ?>
             </ul>
@@ -50,7 +62,7 @@
                         <?php 
                             $image = $work->images()->first();
                         ?>
-                        <figure>
+                        <figure class="work__element">
                             <?php foreach($work->images() as $imageLightbox): ?>
                                 <a class="work__thumb" href="<?php echo $imageLightbox->url() ?>" data-lightbox="<?php echo $work->title() ?>" data-title="<?php echo $imageLightbox->caption() ?>">
                                     <img src="<?php echo thumb($image, array('height' => 200), false) ?>">
@@ -58,6 +70,18 @@
                             <?php endforeach ?>
                             <figcaption><?php echo $work->title() ?></figcaption>
                         </figure>
+                        <?php if($work->text() != ''): ?>
+                            <div class="work__info">
+                                <a class="work__info--button" href="#">i</a>
+                                <div class="work__info--description">
+                                    <div class="work__info--content">
+                                        <h2><?php echo $work->title() ?></h2>
+                                        <p><?php echo $work->text() ?></p>
+                                    </div>
+                                    <a class="work__info--close" href="#"></a>
+                                </div>
+                            </div>
+                        <?php endif ?>
                     </li><!--
                 --><?php endforeach ?>
                 </ul>
@@ -66,5 +90,14 @@
         <?php endforeach ?>
     </ul>
 </div>
+
+<script type="text/javascript">
+    $('.work__info--description').flowtype({
+       minimum   : 300,
+       maximum   : 1000,
+       minFont   : 16,
+       maxFont   : 24
+    });
+</script>
 
 <?php snippet('foot') ?>

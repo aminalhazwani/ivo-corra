@@ -79,6 +79,10 @@
       this.$overlay.hide().on('click', function() {
         self.end();
         $("body").css("overflow", "auto");
+        $('.lb-next').removeClass('activated');
+        $('.lb-prev').removeClass('activated');
+        $('.work__info').removeClass('is-active');
+        $('.work__info--description').removeClass('is-open');
         return false;
       });
 
@@ -86,6 +90,10 @@
         if ($(event.target).attr('id') === 'lightbox') {
           self.end();
           $("body").css("overflow", "auto");
+          $('.lb-next').removeClass('activated');
+          $('.lb-prev').removeClass('activated');
+          $('.work__info').removeClass('is-active');
+          $('.work__info--description').removeClass('is-open');
         }
         return false;
       });
@@ -94,6 +102,10 @@
         if ($(event.target).attr('id') === 'lightbox') {
           self.end();
           $("body").css("overflow", "auto");
+          $('.lb-next').removeClass('activated');
+          $('.lb-prev').removeClass('activated');
+          $('.work__info').removeClass('is-active');
+          $('.work__info--description').removeClass('is-open');
         }
         return false;
       });
@@ -137,6 +149,10 @@
         self.end();
         $('.lightbox').removeClass('open');
         $("body").css("overflow", "auto");
+        $('.lb-next').removeClass('activated');
+        $('.lb-prev').removeClass('activated');
+        $('.work__info').removeClass('is-active');
+        $('.work__info--description').removeClass('is-open');
         return false;
       });
     };
@@ -400,6 +416,10 @@
         this.end();
         $('.lightbox').removeClass('open');
         $("body").css("overflow", "auto");
+        $('.lb-next').removeClass('activated');
+        $('.lb-prev').removeClass('activated');
+        $('.work__info').removeClass('is-active');
+        $('.work__info--description').removeClass('is-open');
         return false;
       } else if (key === 'p' || keycode === KEYCODE_LEFTARROW) {
         if (this.currentImageIndex !== 0) {

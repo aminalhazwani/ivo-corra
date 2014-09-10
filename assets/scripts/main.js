@@ -79,12 +79,28 @@ $(window).on("load", function () {
 	});
 
 	$('.lb-next').click(function(){
-	  $('.lb-next').css({opacity: 0});
-	  $('.lb-prev').css({opacity: 0});
+	  $('.lb-next').addClass('activated');
+	  $('.lb-prev').addClass('activated');
 	});
 
 	$('.lb-prev').click(function(){
-	  $('.lb-next').css({opacity: 0});
-	  $('.lb-prev').css({opacity: 0});
+	  $('.lb-next').addClass('activated');
+	  $('.lb-prev').addClass('activated');
 	});
+
+	$('.work__element').click(function(){
+		$(this).next('.work__info').addClass('is-active');
+	});
+
+	$('.work__info--button').click(function(){
+		$(this).next('.work__info--description').toggleClass('is-open');
+	});
+
+	$('.work__info--close').click(function(){
+		$('.work__info--description').removeClass('is-open');
+	});
+
 });
+
+
+

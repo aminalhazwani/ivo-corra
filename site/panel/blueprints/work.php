@@ -23,6 +23,11 @@ fields:
         label: Testo del progetto
         type:  textarea
         size:  large
+        buttons:
+            - h3
+            - bold
+            - italic
+            - link
 filefields: 
     caption: 
         label: Didascalia foto

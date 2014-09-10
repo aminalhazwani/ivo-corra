@@ -106,20 +106,100 @@
         display: none;
     }
 
-    @include e(description) {
-        display: none;
-        z-index: 99999;
-        position: fixed;
-        background-color: $white;
+    @include e(info) {
 
-        top: 50%;
-        transform: translateY(-50%);
+        @include m(button) {
+            display: none;
+            z-index: 99999;
+            position: fixed;
+            top: 7px;
+            right: 60px;
+            width: 30px;
+            height: 30px;
+            border: 3px solid $white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            color: $white;
+            text-decoration: none;
+        }
 
-        width: 70%;
-        height: 50%;
+        @include m(description) {
+            display: none;
+            z-index: 99999;
+            position: fixed;
+            background-color: $white;
 
-        &.is-open {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            width: 50%;
+            height: 50%;
+
+            @include media-query(tabl) {
+                width: 70%;
+                height: 70%;
+            }
+
+            @include media-query(palm) {
+                width: 80%;
+                height: 80%;
+            }
+
+            div {
+                padding: 0;
+                margin: 0;
+                overflow-y: scroll;
+                height: 100%; 
+                h2 {
+                    max-width: 80%;
+                    line-height: 1.1;
+                    font-weight: normal;
+                    margin: 1.5rem 2rem 1rem 2rem;
+                    @include media-query(palm) {
+                        margin: 0.75rem 1rem 0.5rem 1rem;
+                    }
+                }
+                p {
+                    margin: 0 2rem 2rem 2rem;
+                    @include media-query(palm) {
+                        margin: 0 1rem 1rem 1rem;
+                    }
+                }
+            }
+
+            &.is-open {
+                display: block;
+            }
+        }
+
+        @include m(close) {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            width: 30px;
+            height: 30px;
             display: block;
+            background: url(../images/close-bk.png);
+            background-size: contain;
+            background-position: top right;
+            background-repeat: no-repeat;
+
+            cursor: pointer;
+
+            @include media-query(palm) {
+                height: 20px;
+                width: 20px;
+            }
+        }
+
+        &.is-active {
+            .work__info--button {
+                display: block;
+            }
         }
     }
+
+    
 }
