@@ -77,12 +77,14 @@ $(window).on("load", function () {
 	   $('.contact__container').toggleClass('is-open');
 	   $('.container').toggleClass('is-hidden');
 	});
-});
 
-$(window).on("resize", function () {
-	if ( $(".lightbox").hasClass("open") ) {
-  		$("#lightbox").end();
-        $('.lightbox').removeClass('open');
-        return false;
-  	};
+	$('.lb-next').click(function(){
+	  $('.lb-next').css({opacity: 0});
+	  $('.lb-prev').css({opacity: 0});
+	});
+
+	$('.lb-prev').click(function(){
+	  $('.lb-next').css({opacity: 0});
+	  $('.lb-prev').css({opacity: 0});
+	});
 });
