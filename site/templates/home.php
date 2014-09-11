@@ -23,5 +23,11 @@
     <?php endif ?>
     <?php endforeach ?>
 </div>
+
+<script type="text/javascript">
+    $(window).load(function() {
+        $('.spinner__container').fadeOut(1000);
+    });
+</script>
  
 <?php snippet('foot') ?>
