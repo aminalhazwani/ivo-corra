@@ -212,7 +212,7 @@
       var top  = $window.scrollTop() + this.options.positionFromTop;
       var left = $window.scrollLeft();
       this.$lightbox.css({
-        top: '50%',
+        top: 'calc(50% + 19px)',
         left: left + 'px'
       }).fadeIn(this.options.fadeDuration);
 
