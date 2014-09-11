@@ -35,6 +35,7 @@
                                     <h2><?php echo $work->title() ?></h2>
                                     <p><?php echo $work->text() ?></p>
                                 </div>
+                                <div class="work__info--gradient"></div>
                                 <a class="work__info--close" href="#"></a>
                             </div>
                         </div>
@@ -74,6 +75,7 @@
                                         <h2><?php echo $work->title() ?></h2>
                                         <p><?php echo $work->text() ?></p>
                                     </div>
+                                    <div class="work__info--gradient"></div>
                                     <a class="work__info--close" href="#"></a>
                                 </div>
                             </div>
