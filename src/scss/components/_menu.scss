@@ -35,12 +35,9 @@
           color: #fff;
           margin: 2rem;
 
-          @include media-query(tabl) {
-            font-size: 2.5rem;
-          }
-
-          @include media-query(palm) {
-            font-size: 2rem;
+          @include media-query(tabl-and-down) {
+            font-size: 1.8rem;
+            margin: 1.5rem;
           }
       }
     }

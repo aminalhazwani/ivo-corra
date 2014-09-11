@@ -57,27 +57,13 @@
     }
 
     @include m(colophone) {
+      margin-bottom: 0!important;
       a {
-        font-size: small;
+        font-size: medium;
         border-bottom-width: 1px;
-
-        // .pile-of-poo {
-        //   display: inline-block;
-
-        //   &:after {
-        //     display: inline-block;
-        //     vertical-align: top;
-        //     content: " ";
-        //     width: 20px;
-        //     height: 20px;
-        //     margin: -1px 0.25rem 0 0.25rem;
-
-        //     background-size: cover;
-        //     background-repeat: no-repeat;
-        //     background-position: 50% 50%;
-        //     background-image: url(../images/pile-of-poo.svg);
-        //   }
-        // }
+        @include media-query(tabl-and-down) {
+          font-size: small;
+        }
       }
     }
   }

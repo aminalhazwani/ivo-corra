@@ -47,7 +47,7 @@
                         <figure>
                             <?php foreach($publication->images() as $image): ?>
                                 <a class="box" href="<?php echo $image->url() ?>" data-lightbox="<?php echo ($publication->title()) ?>">
-                                    <img src="<?php echo $image->url() ?>" alt="<?php echo ($publication->title()) ?>" />
+                                    <img src="<?php echo $image->url() ?>" />
                                 </a>
                             <?php endforeach ?>
                         </figure>

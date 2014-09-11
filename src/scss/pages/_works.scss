@@ -70,12 +70,13 @@
             }
 
             img {
-                background-image: url(../images/spinner.gif);
-                background-position: 50% 50%;
-                background-size: 50px 50px;
-                background-repeat: no-repeat;
-
+                min-height: 200px;
+                min-width: 100px;
+                @include media-query(palm) {
+                    min-height: 100px;
+                }
             }
+
             figcaption {
                 font-size: small;
                 line-height: 2;
@@ -90,10 +91,10 @@
         &:first-child {
             display: block;
 
-            background-color: #000;
-            background-image: url(../images/spinner.gif);
+            background-color: $black;
+            background-image: url(../images/loading.gif);
             background-position: 50% 50%;
-            background-size: 50px 50px;
+            background-size: 68px 24px;
             background-repeat: no-repeat;
 
             @include media-query(palm) {
@@ -134,8 +135,8 @@
             left: 50%;
             transform: translate(-50%, -50%);
 
-            width: 50%;
-            height: 50%;
+            width: 60%;
+            height: 60%;
 
             @include media-query(tabl) {
                 width: 70%;
@@ -155,7 +156,6 @@
                 h2 {
                     max-width: 80%;
                     line-height: 1.1;
-                    font-weight: normal;
                     margin: 1.5rem 2rem 1rem 2rem;
                     @include media-query(palm) {
                         margin: 0.75rem 1rem 0.5rem 1rem;

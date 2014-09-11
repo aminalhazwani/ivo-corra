@@ -94,7 +94,7 @@
        minimum   : 300,
        maximum   : 1000,
        minFont   : 16,
-       maxFont   : 24
+       maxFont   : 20
     });
 </script>
 

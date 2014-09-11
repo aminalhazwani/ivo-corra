@@ -325,7 +325,7 @@ body {
   display: block;
   width: 2.5rem;
   height: 0.2rem;
-  margin-top: 1rem;
+  margin-top: 1.3rem;
   background-color: black;
   content: " ";
 }
@@ -339,7 +339,7 @@ body {
 .menu__toogle--bars:after {
   position: absolute;
   display: block;
-  bottom: 0.62rem;
+  bottom: 0.5rem;
   width: 2.5rem;
   height: 0.2rem;
   background-color: black;
@@ -355,7 +355,7 @@ body {
 .menu__toogle--bars:before {
   position: absolute;
   display: block;
-  top: 0.6rem;
+  top: 0.5rem;
   width: 2.5rem;
   height: 0.2rem;
   background-color: black;
@@ -430,7 +430,7 @@ body {
   z-index: 999;
   right: 0;
   height: 2.5rem;
-  margin-right: 1rem;
+  margin-right: 0.5rem;
 }
 .contact__toogle.is-open span:after {
   position: absolute;
@@ -445,9 +445,16 @@ body {
   background-color: black;
   content: " ";
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (min-width: 481px) and (max-width: 767px) {
   .contact__toogle.is-open span:after {
     top: 1.5rem;
+    width: 2rem;
+    height: 0.15rem;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .contact__toogle.is-open span:after {
+    bottom: 1.5rem;
     width: 2rem;
     height: 0.15rem;
   }
@@ -465,9 +472,16 @@ body {
   background-color: black;
   content: " ";
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (min-width: 481px) and (max-width: 767px) {
   .contact__toogle.is-open span:before {
     top: 1.5rem;
+    width: 2rem;
+    height: 0.15rem;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .contact__toogle.is-open span:before {
+    bottom: 1.5rem;
     width: 2rem;
     height: 0.15rem;
   }
@@ -507,14 +521,10 @@ body {
   color: #fff;
   margin: 2rem;
 }
-@media only screen and (min-width: 481px) and (max-width: 767px) {
+@media only screen and (max-width: 767px) {
   .menu__container--list li > a {
-    font-size: 2.5rem;
-  }
-}
-@media only screen and (max-width: 480px) {
-  .menu__container--list li > a {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    margin: 1.5rem;
   }
 }
 
@@ -585,9 +595,17 @@ body {
     margin-bottom: 1rem;
   }
 }
+.contact__container--colophone {
+  margin-bottom: 0 !important;
+}
 .contact__container--colophone a {
-  font-size: small;
+  font-size: medium;
   border-bottom-width: 1px;
+}
+@media only screen and (max-width: 767px) {
+  .contact__container--colophone a {
+    font-size: small;
+  }
 }
 
 /* Preload images */
@@ -889,14 +907,6 @@ body:after {
   display: block;
 }
 
-.publication a {
-  display: none;
-}
-
-.publication a:first-child {
-  display: block;
-}
-
 img {
   width: 100%;
 }
@@ -970,13 +980,6 @@ img {
   }
 }
 
-.section__title {
-  display: block;
-  margin-bottom: 0.5rem;
-  text-transform: uppercase;
-  letter-spacing: 0.25rem;
-}
-
 .clients {
   margin-bottom: 5rem;
 }
@@ -987,7 +990,12 @@ img {
 }
 .clients__list--item {
   display: inline-block;
-  margin-right: 2rem;
+}
+.clients__list--item:last-child:after {
+  content: " ";
+}
+.clients__list--item:after {
+  content: "\2022";
 }
 
 .exhibitions {
@@ -1039,8 +1047,23 @@ img {
     margin-bottom: 2rem;
   }
 }
+.publication figure {
+  line-height: 0;
+  margin-bottom: 0.25rem;
+}
 .publication span {
   font-size: small;
+}
+.publication a {
+  display: none;
+}
+.publication a:first-child {
+  display: block;
+  background-color: black;
+  background-image: url(../images/loading.gif);
+  background-position: 50% 50%;
+  background-size: 68px 24px;
+  background-repeat: no-repeat;
 }
 
 .works__container {
@@ -1109,10 +1132,13 @@ img {
   line-height: 0;
 }
 .related-works__item figure img {
-  background-image: url(../images/spinner.gif);
-  background-position: 50% 50%;
-  background-size: 50px 50px;
-  background-repeat: no-repeat;
+  min-height: 200px;
+  min-width: 100px;
+}
+@media only screen and (max-width: 480px) {
+  .related-works__item figure img {
+    min-height: 100px;
+  }
 }
 .related-works__item figure figcaption {
   font-size: small;
@@ -1124,10 +1150,10 @@ img {
 }
 .work__thumb:first-child {
   display: block;
-  background-color: #000;
-  background-image: url(../images/spinner.gif);
+  background-color: black;
+  background-image: url(../images/loading.gif);
   background-position: 50% 50%;
-  background-size: 50px 50px;
+  background-size: 68px 24px;
   background-repeat: no-repeat;
 }
 @media only screen and (max-width: 480px) {
@@ -1163,8 +1189,8 @@ img {
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 50%;
-  height: 50%;
+  width: 60%;
+  height: 60%;
 }
 @media only screen and (min-width: 481px) and (max-width: 767px) {
   .work__info--description {
@@ -1187,7 +1213,6 @@ img {
 .work__info--description .work__info--content h2 {
   max-width: 80%;
   line-height: 1.1;
-  font-weight: normal;
   margin: 1.5rem 2rem 1rem 2rem;
 }
 @media only screen and (max-width: 480px) {
@@ -1311,4 +1336,12 @@ img {
   .overlay {
     display: none;
   }
+}
+
+.section__title {
+  display: block;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+  font-size: large;
 }

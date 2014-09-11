@@ -72,7 +72,7 @@
 
       width: 2.5rem;
       height: 0.2rem;
-      margin-top: 1rem;
+      margin-top: 1.3rem;
       @include media-query(tabl-and-down) {
         width: 2rem;
         height: 0.15rem;
@@ -85,7 +85,7 @@
       &:after {
         position: absolute;
         display: block;
-        bottom: 0.62rem;
+        bottom: 0.5rem;
 
         width: 2.5rem;
         height: 0.2rem;
@@ -103,7 +103,7 @@
       &:before {
         position: absolute;
         display: block;
-        top: 0.6rem;
+        top: 0.5rem;
 
         width: 2.5rem;
         height: 0.2rem;
@@ -195,7 +195,7 @@
       right: 0;
 
       height: 2.5rem;
-      margin-right: 1rem;
+      margin-right: 0.5rem;
 
       span {
         &:after {
@@ -211,8 +211,14 @@
           background-color: $black;
           content: " ";
 
-          @include media-query(tabl-and-down) {
+          @include media-query(tabl) {
             top: 1.5rem;
+            width: 2rem;
+            height: 0.15rem;
+          }
+
+          @include media-query(palm) {
+            bottom: 1.5rem;
             width: 2rem;
             height: 0.15rem;
           }
@@ -231,11 +237,18 @@
           background-color: $black;
           content: " ";
 
-          @include media-query(tabl-and-down) {
+          @include media-query(tabl) {
             top: 1.5rem;
             width: 2rem;
             height: 0.15rem;
           }
+
+          @include media-query(palm) {
+            bottom: 1.5rem;
+            width: 2rem;
+            height: 0.15rem;
+          }
+
         }
       }
     }
