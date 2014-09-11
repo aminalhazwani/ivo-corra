@@ -1,4 +1,4 @@
-﻿$(window).on("load", function () {
+$(window).on("load", function () {
 	if ( $(window).width() >= 768 ) {
 		var max_x = ($(window).width() - 0);
 		var max_y = $('.work').length*600;//9000;
@@ -19,7 +19,6 @@
 	var filled_areas = new Array();
 
 	$('.work').each(function() {
-		console.log("calculating");
 	    var rand_x=0;
 	    var rand_y=0;
 	    var area;
@@ -27,7 +26,6 @@
 	        rand_x = Math.round(min_x + ((max_x - min_x)*(Math.random() % 1)));
 	        rand_y = Math.round(min_y + ((max_y - min_y)*(Math.random() % 1)));
 	        area = {x: rand_x, y: rand_y, width: $(this).width(), height: $(this).height()};
-	    	console.log(".");
 	    } while(check_overlap(area));
 
 	    filled_areas.push(area);

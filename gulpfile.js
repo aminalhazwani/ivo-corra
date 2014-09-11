@@ -5,7 +5,10 @@ var gulp = require('gulp'),
     minifycss = require('gulp-minify-css'),
     rename = require('gulp-rename'),
     notify = require('gulp-notify'),
-    livereload = require('gulp-livereload');
+    livereload = require('gulp-livereload'),
+    concat = require('gulp-concat'),
+    uglify = require('gulp-uglify'),
+    gzip = require('gulp-gzip');
 
 // gulp styles task
 gulp.task('styles', function() {
@@ -19,19 +22,45 @@ gulp.task('styles', function() {
     .pipe(notify({ message: 'Styles task complete' }));
 });
 
+// Scripts
+gulp.task('scripts', function() {
+  return gulp.src('src/js/vendor/*.js')
+    .pipe(concat('vendor.js'))
+    .pipe(gulp.dest('assets/scripts/vendor'))
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(uglify())
+    //.pipe(gzip())
+    .pipe(gulp.dest('assets/scripts/vendor'))
+    .pipe(notify({ message: 'Scripts task complete' }));
+});
+
+gulp.task('scriptsSpecific', function() {
+  return gulp.src('src/js/*.js')
+    .pipe(gulp.dest('assets/scripts'))
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(uglify())
+    //.pipe(gzip())
+    .pipe(gulp.dest('assets/scripts'))
+    .pipe(notify({ message: 'Scripts task complete' }));
+});
+
 // gulp watch and livereolad task
 gulp.task('watch', function() {
     gulp.watch('src/scss/**/*.scss', ['styles']);
+
+    // Watch .js files
+    gulp.watch('src/js/vendor/*.js', ['scripts']);
+    gulp.watch('src/js/*.js', ['scriptsSpecific']);
 
     var server = livereload();
     gulp.watch(['src/**']).on('change', function(file) {
     server.changed(file.path);
     });
 
-    gulp.start('styles');
+    gulp.start('styles', 'scriptsSpecific', 'scripts');
 });
 
 // gulp default task
 gulp.task('default', function() {
-    gulp.start('styles');
+    gulp.start('styles', 'scriptsSpecific', 'scripts');
 });
