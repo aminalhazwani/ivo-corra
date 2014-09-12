@@ -1,1 +1,5 @@
 ﻿Caption: Un auditorium vuoto
+
+----
+
+Inserisci: si
