@@ -5,18 +5,12 @@
     line-height: 0;
 
     position: absolute;
-    min-width: 100px;
-    max-width: 15%;
+    min-width: 15%;
+
+    max-width: 50%;
+
 
     opacity: 0;
-
-    @include media-query(tabl) {
-        max-width: 20%;
-    }
-
-    @include media-query(palm) {
-        max-width: 30%;
-    }
 }
 
 .work a {

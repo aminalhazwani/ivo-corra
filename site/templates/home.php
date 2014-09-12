@@ -28,6 +28,8 @@
 
 <?php snippet('contact') ?>
 
+<script src="assets/scripts/home.min.js"></script>
+
 <script type="text/javascript">
     $(window).load(function() {
         $('.spinner__container').fadeOut(1000);

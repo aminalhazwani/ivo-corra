@@ -1,21 +1,10 @@
 ﻿$(window).on("load", function () {
-	if ( $(window).width() >= 768 ) {
-		var max_x = ($(window).width() - 0);
-		var max_y = $('.work').length*600;//9000;
-		var min_x = 200;
-	}
-	if ( $(window).width() >= 480 ){
-		var max_x = ($(window).width() - 100);
-		var max_y = $('.work').length*150;//6000;
-		var min_x = 200;
-	}
-	else {
-		var max_x = $(window).width();
-		var max_y = $('.work').length*150;//6000;
-		var min_x = 100;
-	}
+	var max_x = $(window).width();
+	var max_y = $('.work').length*300;
 
+	var min_x = 200;
 	var min_y = 0;
+
 	var filled_areas = new Array();
 
 	$('.work').each(function() {
@@ -46,7 +35,7 @@
 	        var left2 = check_area.x;
 	        var right1 = area.x + area.width;
 	        var right2 = check_area.x + check_area.width;
-	        if (bottom1 < top2 - 20 || top1 - 20 > bottom2 || right1 < left2 - 20 || left1 - 20 > right2) {
+	        if (bottom1 < top2 - 100 || top1 - 100 > bottom2 || right1 < left2 - 100 || left1 - 100 > right2) {
 	            continue;
 	        }
 	        return true;

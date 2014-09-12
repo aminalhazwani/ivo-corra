@@ -884,19 +884,9 @@ body:after {
   background-color: #fff;
   line-height: 0;
   position: absolute;
-  min-width: 100px;
-  max-width: 15%;
+  min-width: 15%;
+  max-width: 50%;
   opacity: 0;
-}
-@media only screen and (min-width: 481px) and (max-width: 767px) {
-  .work {
-    max-width: 20%;
-  }
-}
-@media only screen and (max-width: 480px) {
-  .work {
-    max-width: 30%;
-  }
 }
 
 .work a {
@@ -1316,6 +1306,7 @@ img {
 }
 
 .container {
+  position: relative;
   max-width: 90%;
   padding-top: 5rem;
   margin: 0 auto;
