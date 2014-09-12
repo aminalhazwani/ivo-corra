@@ -1137,7 +1137,7 @@ img {
   line-height: 0;
 }
 .related-works__item figure img {
-  min-height: 200px;
+  min-height: 180px;
   min-width: 100px;
 }
 @media only screen and (max-width: 480px) {

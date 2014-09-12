@@ -21,7 +21,7 @@
                     <figure class="work__element">
                         <?php foreach($work->images() as $imageLightbox): ?>
                             <a class="work__thumb" href="<?php echo $imageLightbox->url() ?>" data-lightbox="<?php echo $work->title() ?>" data-title="<?php echo $imageLightbox->caption() ?>">
-                                <img src="<?php echo thumb($image, array('height' => 200), false) ?>">
+                                <img src="<?php echo thumb($image, array('height' => 180), false) ?>">
                             </a>
                         <?php endforeach ?>
                         <figcaption><?php echo $work->title() ?></figcaption>
@@ -61,7 +61,7 @@
                         <figure class="work__element">
                             <?php foreach($work->images() as $imageLightbox): ?>
                                 <a class="work__thumb" href="<?php echo $imageLightbox->url() ?>" data-lightbox="<?php echo $work->title() ?>" data-title="<?php echo $imageLightbox->caption() ?>">
-                                    <img src="<?php echo thumb($image, array('height' => 200), false) ?>">
+                                    <img src="<?php echo thumb($image, array('height' => 180), false) ?>">
                                 </a>
                             <?php endforeach ?>
                             <figcaption><?php echo $work->title() ?></figcaption>

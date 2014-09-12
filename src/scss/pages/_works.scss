@@ -70,7 +70,7 @@
             }
 
             img {
-                min-height: 200px;
+                min-height: 180px;
                 min-width: 100px;
                 @include media-query(palm) {
                     min-height: 100px;
