@@ -11,11 +11,12 @@
     <?php foreach($pages->find('works')->children()->visible() as $work): ?>
     <?php if($work->home() == 'ja'): ?>
         <div class="work"> 
+            <?php $img = $work->images()->first(); ?>
             <?php foreach($work->images() as $image): ?>
                 <?php if($image->inserisci() != ''): ?>
-                    <a class="box" href="<?php echo $image->url() ?>" data-lightbox="<?php echo $work->title() ?>" data-title="<?php echo $image->caption() ?>">
+                    <a class="box" href="<?php echo $img->url() ?>" data-lightbox="<?php echo $work->title() ?>" data-title="<?php echo $image->caption() ?>">
                         <!-- <div class="overlay"></div> -->
-                        <img src="<?php echo thumb($image, array('width' => 300), false) ?>" alt="<?php echo $work->title() ?>">
+                        <img src="<?php echo thumb($img, array('width' => 300), false) ?>" alt="<?php echo $work->title() ?>">
                     </a>
                 <?php endif ?>
             <?php endforeach ?>
