@@ -3,7 +3,6 @@
 <?php snippet('controls') ?>
 <h1 class="site__title"><a href="<?php echo url() ?>">Ivo Corrà</a></h1>
 <?php snippet('menu') ?>
-<?php snippet('contact') ?>
 
 <?php snippet('spinner') ?>
 
@@ -26,6 +25,8 @@
 </div>
 
 <?php snippet('scripts') ?>
+
+<?php snippet('contact') ?>
 
 <script type="text/javascript">
     $(window).load(function() {

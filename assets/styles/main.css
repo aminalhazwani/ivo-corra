@@ -1034,17 +1034,22 @@ img {
   padding: 0;
   list-style-type: none;
 }
+@media only screen and (max-width: 767px) {
+  .publications ul {
+    margin: 0;
+  }
+}
 
 .publication {
   display: inline-block;
-  width: 44%;
+  width: 43%;
   margin-bottom: 2rem;
   padding-left: 2rem;
 }
 @media only screen and (max-width: 767px) {
   .publication {
     width: 100%;
-    margin-bottom: 2rem;
+    padding: 0;
   }
 }
 .publication figure {
