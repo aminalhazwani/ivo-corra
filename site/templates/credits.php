@@ -1,7 +1,6 @@
 <?php snippet('head') ?>
 <?php snippet('controls') ?>
 <?php snippet('menu') ?>
-<?php snippet('contact') ?>
 
     <div class="credit__container">
         <section class="clients">
@@ -63,6 +62,8 @@
     </div>
 
 <?php snippet('scripts') ?>
+
+<?php snippet('contact') ?>
 
 <script type="text/javascript">
 $('.clients__list, .exhibition__title').flowtype({

@@ -1,7 +1,6 @@
 <?php snippet('head') ?>
 <?php snippet('controls') ?>
 <?php snippet('menu') ?>
-<?php snippet('contact') ?>
 
 <div class="journal__container">
   <ul class="journal__post-list">
@@ -16,6 +15,8 @@
 </div>
 
 <?php snippet('scripts') ?>
+
+<?php snippet('contact') ?>
 
 <script type="text/javascript">
     $('.journal__container').flowtype({

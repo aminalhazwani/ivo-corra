@@ -1,7 +1,6 @@
 <?php snippet('head') ?>
 <?php snippet('controls') ?>
 <?php snippet('menu') ?>
-<?php snippet('contact') ?>
 
 <div class="about__container">
     <?php echo markdown($page->bio()) ?>
@@ -10,6 +9,8 @@
 </div>
 
 <?php snippet('scripts') ?>
+
+<?php snippet('contact') ?>
 
 <script type="text/javascript">
     $('.about__container').flowtype({
