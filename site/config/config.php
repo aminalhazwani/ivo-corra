@@ -445,3 +445,17 @@ array('.', '..', '.DS_Store', '.svn', '.git', '.htaccess');
 
 */
 c::set('content.file.ignore', array());
+
+
+/* 
+
+---------------------------------------
+Thumb config variables
+---------------------------------------
+
+*/
+
+c::set('thumb.cache.root', c::get('root') . '/thumbs');
+c::set('thumb.quality', 80);
+c::set('thumb.upscale', false);
+c::set('thumb.datauri', false);
