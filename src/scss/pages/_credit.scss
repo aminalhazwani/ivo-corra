@@ -84,18 +84,22 @@
         padding: 0;
 
         list-style-type: none;
+
+        @include media-query(tabl-and-down) {
+            margin: 0;
+        }
     }
 }
 
 .publication {
     display: inline-block;
-    width: 44%;
+    width: 43%;
     margin-bottom: 2rem;
     padding-left: 2rem;
 
     @include media-query(tabl-and-down) {
         width: 100%;
-        margin-bottom: 2rem;
+        padding: 0;
     }
 
     figure {
