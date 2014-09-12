@@ -610,7 +610,7 @@ body {
 
 /* Preload images */
 body:after {
-  content: url(../images/close.png) url(../images/spinner.gif) url(../images/prev.png) url(../images/next.png);
+  content: url(../images/close.png) url(../images/prev.png) url(../images/next.png);
   display: none;
 }
 

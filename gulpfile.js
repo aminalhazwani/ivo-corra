@@ -7,8 +7,7 @@ var gulp = require('gulp'),
     notify = require('gulp-notify'),
     livereload = require('gulp-livereload'),
     concat = require('gulp-concat'),
-    uglify = require('gulp-uglify'),
-    gzip = require('gulp-gzip');
+    uglify = require('gulp-uglify');
 
 // gulp styles task
 gulp.task('styles', function() {
@@ -29,7 +28,6 @@ gulp.task('scripts', function() {
     .pipe(gulp.dest('assets/scripts/vendor'))
     .pipe(rename({ suffix: '.min' }))
     .pipe(uglify())
-    //.pipe(gzip())
     .pipe(gulp.dest('assets/scripts/vendor'))
     .pipe(notify({ message: 'Scripts task complete' }));
 });
@@ -39,7 +37,6 @@ gulp.task('scriptsSpecific', function() {
     .pipe(gulp.dest('assets/scripts'))
     .pipe(rename({ suffix: '.min' }))
     .pipe(uglify())
-    //.pipe(gzip())
     .pipe(gulp.dest('assets/scripts'))
     .pipe(notify({ message: 'Scripts task complete' }));
 });
