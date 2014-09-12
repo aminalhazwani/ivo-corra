@@ -10,9 +10,5 @@
 
         <link rel="icon" type="image/png" href="<?php echo url() ?>/assets/images/favicon.png">
         <?php echo css('assets/styles/main.min.css') ?>
-
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-        <script src="assets/scripts/vendor/vendor.min.js"></script>
-        <script src="assets/scripts/home.min.js"></script>
     </head>
     <body>

@@ -89,6 +89,8 @@
     </ul>
 </div>
 
+<?php snippet('scripts') ?>
+
 <script type="text/javascript">
     $('.work__info--description').flowtype({
        minimum   : 300,

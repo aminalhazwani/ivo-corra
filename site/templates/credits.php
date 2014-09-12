@@ -62,13 +62,15 @@
         </section>
     </div>
 
-    <script type="text/javascript">
-    $('.clients__list, .exhibition__title').flowtype({
-       minimum   : 500,
-       maximum   : 1200,
-       minFont   : 18,
-       maxFont   : 30
-    });
-    </script>
+<?php snippet('scripts') ?>
+
+<script type="text/javascript">
+$('.clients__list, .exhibition__title').flowtype({
+   minimum   : 500,
+   maximum   : 1200,
+   minFont   : 18,
+   maxFont   : 30
+});
+</script>
 
 <?php snippet('foot') ?>

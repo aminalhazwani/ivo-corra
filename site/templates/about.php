@@ -9,6 +9,8 @@
     <div class="dot__container"></div>
 </div>
 
+<?php snippet('scripts') ?>
+
 <script type="text/javascript">
     $('.about__container').flowtype({
        minimum   : 500,

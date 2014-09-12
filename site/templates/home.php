@@ -25,6 +25,8 @@
     <?php endforeach ?>
 </div>
 
+<?php snippet('scripts') ?>
+
 <script type="text/javascript">
     $(window).load(function() {
         $('.spinner__container').fadeOut(1000);

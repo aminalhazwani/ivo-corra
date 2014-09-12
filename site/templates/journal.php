@@ -15,6 +15,8 @@
   </ul>
 </div>
 
+<?php snippet('scripts') ?>
+
 <script type="text/javascript">
     $('.journal__container').flowtype({
        minimum   : 500,
