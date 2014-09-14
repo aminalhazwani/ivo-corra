@@ -8,11 +8,11 @@
     $tags = tagcloud($works);
 ?>
 
-<div class="works__new">
+<div class="works__container">
     <?php foreach($tags as $tag): ?>
         <?php if($tag->name() == 'new'): ?>
-            <span class="section__title"><?php echo $tag->name() ?></span>
-            <ul class="tag__name--related-works">
+            <span class="section__title flash"><?php echo $tag->name() ?></span>
+            <ul class="tag__name--related-works" style="margin-bottom: 3rem">
             <?php 
             $tagname = $tag->name();
             foreach($works->children()->filterBy('tags', $tagname, ',') as $work): ?>
@@ -44,9 +44,7 @@
             </ul>
         <?php endif ?>
     <?php endforeach ?>
-</div>
 
-<div class="works__container">
     <ul class="works__tags--list">
         <?php foreach($tags as $tag): ?>
             <?php if($tag->name() != 'new'): ?>
@@ -89,7 +87,6 @@
 </div>
 
 <?php snippet('scripts') ?>
-
 <?php snippet('contact') ?>
 
 <script type="text/javascript">

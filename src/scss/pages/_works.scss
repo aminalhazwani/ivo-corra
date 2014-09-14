@@ -1,7 +1,13 @@
 .works {
     @include e(container) {
         @include container;
-        padding-top: 4rem;
+        padding-top: 5rem;
+        @include media-query(palm) {
+            padding-top: 5rem;
+        }
+        &:last-child {
+            padding-top: 0;
+        }
     }
 
     @include e(tags) {
@@ -10,21 +16,6 @@
             padding: 0;
 
             list-style-type: none;
-        }
-    }
-
-    @include e(new) {
-        margin: 5rem auto 0 auto;
-        padding: 2rem 2rem 1rem 2rem;
-        border: 0.2rem solid #000;
-        max-width: 70%;
-
-        background-color: $white;
-
-        @include media-query(tabl-and-down) {
-            padding: 1rem 1rem 0 1rem;
-            max-width: 80%;
-            margin: 5rem auto 4rem auto;
         }
     }
 }
@@ -217,6 +208,39 @@
             }
         }
     }
+}
 
-    
+.flash {
+    -webkit-animation-name: blinker;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+
+    -moz-animation-name: blinker;
+    -moz-animation-duration: 1s;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+
+    animation-name: blinker;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@-moz-keyframes blinker {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+
+@-webkit-keyframes blinker {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+
+@keyframes blinker {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
 }
