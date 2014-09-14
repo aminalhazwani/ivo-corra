@@ -14,7 +14,10 @@
         margin-bottom: 2rem;
 
         @include m(date) {
-            font-size: medium;
+            margin-bottom: .5rem;
+            text-transform: uppercase;
+            letter-spacing: .10rem;
+            font-size: large;
 
             @include media-query(tabl-and-down) {
                 font-size: small;

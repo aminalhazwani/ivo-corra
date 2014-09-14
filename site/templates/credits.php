@@ -59,6 +59,14 @@
                 <?php endforeach ?>
             </ul>
         </section>
+
+        <div class="dot__container">
+            <?php snippet('dotdot') ?>
+            <?php snippet('dotdot') ?>
+            <?php snippet('dotdot') ?>
+            <?php snippet('dotdot') ?>
+            <?php snippet('dotdot') ?>
+        </div>
     </div>
 
 <?php snippet('scripts') ?>
@@ -70,7 +78,7 @@ $('.clients__list, .exhibition__title').flowtype({
    minimum   : 500,
    maximum   : 1200,
    minFont   : 18,
-   maxFont   : 30
+   maxFont   : 22
 });
 </script>
 
