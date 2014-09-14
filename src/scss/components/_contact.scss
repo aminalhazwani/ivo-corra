@@ -21,9 +21,13 @@
       left: 50%;
       transform: translate(-50%, -50%);
 
-      width: 90%;
+      width: 70%;
       margin: 0;
       padding: 0;
+
+      @include media-query(tabl-and-down) {
+        width: 90%;
+      }
 
       text-align: center;
 
