@@ -7,6 +7,8 @@
     </div>
 
     <div class="contact__container--mail">
+      <p>Mob. <?php $about = $pages->find('about'); echo $about->mobile(); ?></p>
+      <p>Tel. <?php $about = $pages->find('about'); echo $about->phone(); ?></p>
       <a href="mailto:<?php $about = $pages->find('about'); echo $about->mail(); ?>">
         <?php $about = $pages->find('about'); echo $about->mail(); ?>
       </a>
@@ -30,6 +32,6 @@
        minimum   : 500,
        maximum   : 1200,
        minFont   : 18,
-       maxFont   : 30
+       maxFont   : 22
     });
 </script>

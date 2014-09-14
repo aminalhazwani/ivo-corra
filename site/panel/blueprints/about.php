@@ -17,6 +17,12 @@ fields:
     address: 
         label: Via/piazza e numero civico
         type:  text
+    phone: 
+        label: Numero di telefono fisso
+        type:  text
+    mobile: 
+        label: Numero cellulare
+        type:  text
     city:
         label: CAP e città
         type: text
