@@ -34,4 +34,10 @@ $( document ).ready(function () {
     $('.work__info--close').click(function(){
         $('.work__info--description').removeClass('is-open');
     });
+
+    // function blinker() {
+    //   $('#flash').fadeOut(500);
+    //   $('#flash').fadeIn(500);
+    // }
+    // setInterval(blinker, 1000);
 });

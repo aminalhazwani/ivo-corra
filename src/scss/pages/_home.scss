@@ -6,11 +6,13 @@
 
     position: absolute;
     min-width: 15%;
-
-    max-width: 50%;
-
+    max-width: 30%;
 
     opacity: 0;
+
+    @include media-query(palm) {
+        max-width: 40%;
+    }
 }
 
 .work a {
@@ -23,13 +25,4 @@
 
 img{
     width: 100%;
-}
-
-.box:hover > .overlay {
-    opacity: 1;
-    background-size: 8rem;
-}
-
-.box:hover > img {
-    //opacity: 0.2;
 }
