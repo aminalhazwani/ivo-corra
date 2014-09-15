@@ -253,14 +253,12 @@ html {
 
 body {
   font-family: 'Inconsolata', 'Lucida Console', 'Courier New', monospace;
-  height: 100%;
 }
 
 /* Media Queries */
 /* Container definition */
 .site__title {
   position: fixed;
-  z-index: -1;
   top: 50%;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
@@ -776,24 +774,6 @@ body:after {
   color: #999999;
 }
 
-.lb-info {
-  position: fixed;
-  z-index: 999999;
-  right: 60px;
-  top: 7px;
-  display: block;
-  border: 3px solid white;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  text-align: center;
-}
-.lb-info:after {
-  color: #fff;
-  content: "i";
-  line-height: 30px;
-}
-
 .lb-closeContainer {
   position: fixed;
   right: 10px;
@@ -1154,12 +1134,10 @@ img {
   display: none;
   z-index: 99999;
   position: fixed;
-  top: 7px;
+  top: 10px;
   right: 60px;
   width: 30px;
   height: 30px;
-  border: 3px solid white;
-  border-radius: 50%;
   text-align: center;
   line-height: 30px;
   color: white;

@@ -167,24 +167,6 @@ body:after {
   color: #999999;
 }
 
-.lb-info {
-  position: fixed;
-  z-index: 999999;
-  right: 60px;
-  top: 7px;
-  display: block;
-  border: 3px solid $white;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  text-align: center;
-  &:after {
-    color: #fff;
-    content: "i";
-    line-height: 30px;
-  }
-}
-
 .lb-closeContainer {
   position: fixed;
   right: 10px;

@@ -2,7 +2,6 @@
 .site {
   @include e(title) {
     position: fixed;
-    z-index: -1;
     top: 50%;
     transform: translateY(-50%);
     @include media-query(tabl-and-down) {
