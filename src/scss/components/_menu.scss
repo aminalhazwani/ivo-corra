@@ -28,7 +28,7 @@
       li > a {
           display: block;
           font-size: 2.5rem;
-          letter-spacing: 1rem;
+          letter-spacing: 0.75rem;
           text-transform: uppercase;
           text-align: center;
           text-decoration: none;
@@ -36,6 +36,7 @@
           margin: 2rem;
 
           @include media-query(tabl-and-down) {
+            letter-spacing: 0.5rem;
             font-size: 1.8rem;
             margin: 1.5rem;
           }
