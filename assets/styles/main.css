@@ -1067,9 +1067,15 @@ img {
   padding-top: 0;
 }
 .works__tags--list {
-  margin: 0;
+  margin: 0.5rem 0 0 0;
   padding: 0;
   list-style-type: none;
+}
+.works__about {
+  padding: 1rem 1rem 0.5rem 1rem;
+  margin-bottom: 4rem;
+  color: white;
+  background-color: black;
 }
 
 .tags__list--item {
@@ -1080,6 +1086,13 @@ img {
   margin: 0;
   padding: 0;
   width: 100%;
+}
+.tag__list--item {
+  display: inline-block;
+  margin-right: 1rem;
+}
+.tag__list--item a {
+  color: white;
 }
 
 .related-works__item {

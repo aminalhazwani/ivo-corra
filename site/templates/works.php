@@ -44,11 +44,22 @@
         <?php endif ?>
     <?php endforeach ?>
 
+    <div class="works__about">
+        I work in many fields. Take a look down here or scroll directly to a category of you interest!
+        <ul class="works__tags--list">
+            <?php foreach($tags as $tag): ?>
+                <?php if($tag->name() != 'new'): ?>
+                    <li class="tag__list--item"><a href="#<?php echo $tag->name() ?>"><span class="section__title"><?php echo $tag->name() ?></span></a></li>
+                <?php endif ?>
+            <?php endforeach ?>
+        </ul>
+    </div>
+
     <ul class="works__tags--list">
         <?php foreach($tags as $tag): ?>
             <?php if($tag->name() != 'new'): ?>
             <li class="tags__list--item">
-                <span class="section__title"><?php echo $tag->name() ?></span>
+                <span class="section__title" id="#<?php echo $tag->name() ?>"><?php echo $tag->name() ?></span>
                 <ul class="tag__name--related-works">
                 <?php 
                 $tagname = $tag->name();
@@ -88,12 +99,21 @@
 <?php snippet('scripts') ?>
 <?php snippet('contact') ?>
 
+
+/* To be removed */
 <script type="text/javascript">
     $('.work__info--description').flowtype({
        minimum   : 300,
        maximum   : 1000,
        minFont   : 16,
-       maxFont   : 20
+       maxFont   : 16
+    });
+
+    $('.works__about').flowtype({
+       minimum   : 300,
+       maximum   : 1000,
+       minFont   : 16,
+       maxFont   : 16
     });
 </script>
 

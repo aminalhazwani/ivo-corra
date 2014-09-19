@@ -12,11 +12,19 @@
 
     @include e(tags) {
         @include m(list) {
-            margin: 0;
+            margin: 0.5rem 0 0 0;
             padding: 0;
 
             list-style-type: none;
         }
+    }
+
+    @include e(about) {
+        padding: 1rem 1rem 0.5rem 1rem;
+        margin-bottom: 4rem;
+
+        color: $white;
+        background-color: $black;
     }
 }
 
@@ -35,6 +43,17 @@
             padding: 0;
 
             width: 100%;
+        }
+    }
+
+    @include e(list) {
+        @include m(item) {
+            display: inline-block;
+            margin-right: 1rem;
+
+            a {
+                color: $white;
+            }
         }
     }
 }
