@@ -66,7 +66,6 @@ body:after {
   width: 32px;
   height: 32px;
   margin: 0 auto;
-  //background: url(../images/spinner.gif) no-repeat;
   background: none;
 }
 
@@ -81,13 +80,6 @@ body:after {
 
 .lb-container > .nav {
   left: 0;
-}
-
-.lb-container {
-  // background-image: url(../images/spinner.gif);
-  // background-position: 50% 50%;
-  // background-size: 50px 50px;
-  // background-repeat: no-repeat;
 }
 
 .lb-nav a {
@@ -109,9 +101,13 @@ body:after {
   width: 50%;
   left: 0;
   float: left;
-  background: url(../images/prev.png) left 50% no-repeat;
-  background-size: 50px 50px;
-  background-position-x: 5%;
+  background-image: url(../images/prev.png);
+  background-repeat: no-repeat;
+  background-position: 5% 50%;
+  background-size: 40px 40px;
+  @include media-query(table-and-down) {
+    background-size: 30px 30px;
+  }
 }
 
 
@@ -119,9 +115,13 @@ body:after {
   width: 50%;
   right: 0;
   float: right;
-  background: url(../images/next.png) right 50% no-repeat;
-  background-size: 50px 50px;
-  background-position-x: 95%;
+  background-image: url(../images/next.png);
+  background-repeat: no-repeat;
+  background-position: 95% 50%;
+  background-size: 40px 40px;
+  @include media-query(table-and-down) {
+    background-size: 30px 30px;
+  }
 }
 
 .lb-dataContainer {
@@ -170,19 +170,20 @@ body:after {
 .lb-closeContainer {
   position: fixed;
   right: 10px;
-  top: 10px;
-  width: 30px;
+  top: 13px;
+  width: 20px;
+  height: 20px;
 }
 
 .lb-close, .lb-data{
   display: block;
   outline: none;
-  height: 30px
+  height: 20px
 }
 
 .lb-close {
   display: block;
-  background: url(../images/close.png);
+  background-image: url(../images/close.png);
   background-size: contain;
   background-position: top right;
   background-repeat: no-repeat;

@@ -40,7 +40,7 @@
 
         text-decoration: none;
         color: $black;
-        border-bottom: 2px solid $black;
+        border-bottom: 1px solid $black;
       }
 
       div {
@@ -63,11 +63,8 @@
     @include m(colophone) {
       margin-bottom: 0!important;
       a {
-        font-size: medium;
+        font-size: small;
         border-bottom-width: 1px;
-        @include media-query(tabl-and-down) {
-          font-size: small;
-        }
       }
     }
   }

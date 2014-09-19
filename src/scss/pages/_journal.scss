@@ -1,6 +1,12 @@
 .journal {
     @include e(container) {
         @include container;
+
+        padding-top: 100px;
+        max-width: 590px;
+        @include media-query(tabl) {
+            max-width: 80%;
+        }
     }
 
     @include e(post-list) {
@@ -17,19 +23,17 @@
             margin-bottom: .5rem;
             text-transform: uppercase;
             letter-spacing: .10rem;
-            font-size: large;
-
-            @include media-query(tabl-and-down) {
-                font-size: small;
-            }
+            font-size: small;
         }
 
         @include m(title) {
             margin: 0;
+            font-weight: normal;
         }
 
         @include m(description) {
             margin: 0;
+            font-size: medium;
         }
     }
 }

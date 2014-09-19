@@ -1,6 +1,12 @@
 .about__container {
     @include container;
 
+    padding-top: 100px;
+    max-width: 590px;
+    @include media-query(tabl) {
+        max-width: 80%;
+    }
+
     p {
         &:first-child {
             margin-top: 0;
@@ -11,7 +17,7 @@
         }
         &:before {
             content: " ";
-            margin: 0 0 0 4rem;
+            margin: 0 0 0 3rem;
             @include media-query(palm) {
                 margin: 0 0 0 2rem;
             }

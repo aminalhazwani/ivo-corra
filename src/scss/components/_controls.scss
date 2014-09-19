@@ -70,7 +70,7 @@
       display: block;
 
       width: 2.5rem;
-      height: 0.2rem;
+      height: 0.15rem;
       margin-top: 1.3rem;
       @include media-query(tabl-and-down) {
         width: 2rem;
@@ -87,7 +87,7 @@
         bottom: 0.5rem;
 
         width: 2.5rem;
-        height: 0.2rem;
+        height: 0.15rem;
         @include media-query(tabl-and-down) {
           bottom: 0.5rem;
 
@@ -105,7 +105,7 @@
         top: 0.5rem;
 
         width: 2.5rem;
-        height: 0.2rem;
+        height: 0.15rem;
         @include media-query(tabl-and-down) {
           top: 0.5rem;
 
@@ -205,7 +205,7 @@
           top: 1rem;
 
           width: 2.5rem;
-          height: 0.2rem;
+          height: 0.15rem;
 
           background-color: $black;
           content: " ";

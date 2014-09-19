@@ -19,7 +19,7 @@
       this.positionFromTop             = 0;
       this.showImageNumberLabel        = true;
       this.alwaysShowNavOnTouchDevices = false;
-      this.wrapAround                  = false;
+      this.wrapAround                  = true;
     }
     
     // Change to localize to non-english language
@@ -61,7 +61,7 @@
     // Attach event handlers to the new DOM elements. click click click
     Lightbox.prototype.build = function() {
       var self = this;
-      $("<div id='lightboxOverlay' class='lightboxOverlay'><div class='spinner'><div class='bounce1'></div><div class='bounce2'></div><div class='bounce3'></div></div><div class='lb-closeContainer'><a class='lb-close'></a></div></div></div><div id='lightbox' class='lightbox'><div class='lb-outerContainer'><div class='lb-container'><img class='lb-image' src='' /><div class='lb-nav'><a class='lb-prev' href='' ></a><a class='lb-next' href='' ></a></div><div class='lb-loader'><a class='lb-cancel'></a></div></div></div><div class='lb-dataContainer'><div class='lb-data'><div class='lb-details'><span class='lb-caption'></span><span class='lb-number'></span></div></div></div></div>").appendTo($('body'));
+      $("<div id='lightboxOverlay' class='lightboxOverlay'><div class='spinner'><div class='bounce1'></div><div class='bounce2'></div><div class='bounce3'></div></div><div class='lb-closeContainer'><a class='lb-close'></a></div></div></div><div id='lightbox' class='lightbox'><div class='lb-outerContainer'><div class='lb-container'><img class='lb-image fade-img' src='' /><div class='lb-nav'><a class='lb-prev' href='' ></a><a class='lb-next' href='' ></a></div><div class='lb-loader'><a class='lb-cancel'></a></div></div></div><div class='lb-dataContainer'><div class='lb-data'><div class='lb-details'><span class='lb-caption'></span><span class='lb-number'></span></div></div></div></div>").appendTo($('body'));
       
       // Cache jQuery objects
       this.$lightbox       = $('#lightbox');
@@ -313,7 +313,7 @@
     // Display the image and it's details and begin preload neighboring images.
     Lightbox.prototype.showImage = function() {
       this.$lightbox.find('.lb-loader').hide();
-      this.$lightbox.find('.lb-image').fadeIn();
+      this.$lightbox.find('.lb-image').fadeIn(2000);
     
       this.updateNav();
       this.updateDetails();

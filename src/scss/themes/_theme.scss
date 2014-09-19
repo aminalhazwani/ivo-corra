@@ -33,18 +33,17 @@
 
     text-transform: uppercase;
     letter-spacing: 0.25rem;
-    font-size: large;
-
-    @include media-query(tabl-and-down) {
-        font-size: medium;
-    }
+    font-size: medium;
 }
 
 .dot {
     @include e(container) {
         margin-top: 5rem;
         height: 100px; 
-        width: 101%;
+        width: 100%;
+        @include media-query(tabl-and-down) {
+            width: 102%;
+        }
 
         @include m(row) {
             height: 20px;

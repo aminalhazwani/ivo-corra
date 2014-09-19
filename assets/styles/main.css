@@ -243,7 +243,7 @@ table {
  * Typography
  */
 html {
-  font-size: 1em;
+  font-size: 18px;
   line-height: 1.4;
   margin: 0;
   padding: 0;
@@ -322,7 +322,7 @@ body {
   position: absolute;
   display: block;
   width: 2.5rem;
-  height: 0.2rem;
+  height: 0.15rem;
   margin-top: 1.3rem;
   background-color: black;
   content: " ";
@@ -339,7 +339,7 @@ body {
   display: block;
   bottom: 0.5rem;
   width: 2.5rem;
-  height: 0.2rem;
+  height: 0.15rem;
   background-color: black;
   content: " ";
 }
@@ -355,7 +355,7 @@ body {
   display: block;
   top: 0.5rem;
   width: 2.5rem;
-  height: 0.2rem;
+  height: 0.15rem;
   background-color: black;
   content: " ";
 }
@@ -439,7 +439,7 @@ body {
   opacity: 1;
   top: 1rem;
   width: 2.5rem;
-  height: 0.2rem;
+  height: 0.15rem;
   background-color: black;
   content: " ";
 }
@@ -584,7 +584,7 @@ body {
   padding-bottom: 0.25rem;
   text-decoration: none;
   color: black;
-  border-bottom: 2px solid black;
+  border-bottom: 1px solid black;
 }
 .contact__container--wrapper div {
   margin-bottom: 2rem;
@@ -603,13 +603,8 @@ body {
   margin-bottom: 0 !important;
 }
 .contact__container--colophone a {
-  font-size: medium;
+  font-size: small;
   border-bottom-width: 1px;
-}
-@media only screen and (max-width: 767px) {
-  .contact__container--colophone a {
-    font-size: small;
-  }
 }
 
 /* Preload images */
@@ -716,18 +711,20 @@ body:after {
   width: 50%;
   left: 0;
   float: left;
-  background: url(../images/prev.png) left 50% no-repeat;
-  background-size: 50px 50px;
-  background-position-x: 5%;
+  background-image: url(../images/prev.png);
+  background-repeat: no-repeat;
+  background-position: 5% 50%;
+  background-size: 40px 40px;
 }
 
 .lb-nav a.lb-next {
   width: 50%;
   right: 0;
   float: right;
-  background: url(../images/next.png) right 50% no-repeat;
-  background-size: 50px 50px;
-  background-position-x: 95%;
+  background-image: url(../images/next.png);
+  background-repeat: no-repeat;
+  background-position: 95% 50%;
+  background-size: 40px 40px;
 }
 
 .lb-dataContainer {
@@ -778,19 +775,20 @@ body:after {
 .lb-closeContainer {
   position: fixed;
   right: 10px;
-  top: 10px;
-  width: 30px;
+  top: 13px;
+  width: 20px;
+  height: 20px;
 }
 
 .lb-close, .lb-data {
   display: block;
   outline: none;
-  height: 30px;
+  height: 20px;
 }
 
 .lb-close {
   display: block;
-  background: url(../images/close.png);
+  background-image: url(../images/close.png);
   background-size: contain;
   background-position: top right;
   background-repeat: no-repeat;
@@ -898,6 +896,8 @@ img {
   padding: 5% 0;
   overflow: hidden;
   background-color: white;
+  padding-top: 100px;
+  max-width: 590px;
 }
 @media only screen and (min-width: 481px) and (max-width: 767px) {
   .about__container {
@@ -911,6 +911,11 @@ img {
     padding-top: 5%;
   }
 }
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  .about__container {
+    max-width: 80%;
+  }
+}
 .about__container p:first-child {
   margin-top: 0;
 }
@@ -920,7 +925,7 @@ img {
 }
 .about__container p:before {
   content: " ";
-  margin: 0 0 0 4rem;
+  margin: 0 0 0 3rem;
 }
 @media only screen and (max-width: 480px) {
   .about__container p:before {
@@ -1061,14 +1066,14 @@ img {
 }
 @media only screen and (max-width: 480px) {
   .works__container {
-    padding-top: 2rem;
+    padding-top: 1rem;
   }
 }
 .works__container:last-child {
   padding-top: 0;
 }
 .works__tags--list {
-  margin: 0;
+  margin: 1rem 0 0 0;
   padding: 0;
   list-style-type: none;
 }
@@ -1083,6 +1088,11 @@ img {
     padding: 1rem 1rem 0.75rem 1rem;
   }
 }
+@media only screen and (max-width: 480px) {
+  .works__about {
+    margin-bottom: 2rem;
+  }
+}
 
 .tags__list--item {
   padding-top: 1rem;
@@ -1093,6 +1103,14 @@ img {
   margin: 0;
   padding: 0;
   width: 100%;
+}
+.tag__name--related-works.new {
+  margin-bottom: 3rem;
+}
+@media only screen and (max-width: 480px) {
+  .tag__name--related-works.new {
+    margin-bottom: 2rem;
+  }
 }
 .tag__list--item {
   display: inline-block;
@@ -1145,11 +1163,13 @@ img {
   display: none;
   z-index: 99999;
   position: fixed;
-  top: 10px;
-  right: 60px;
+  top: 7px;
+  right: 45px;
   width: 30px;
   height: 30px;
   text-align: center;
+  border-radius: 50%;
+  border: 1px solid white;
   line-height: 30px;
   color: white;
   text-decoration: none;
@@ -1186,6 +1206,8 @@ img {
   height: 100%;
 }
 .work__info--description .work__info--content h2 {
+  font-weight: normal;
+  letter-spacing: 0.15rem;
   max-width: 80%;
   line-height: 1.1;
   margin: 1.5rem 2rem 1rem 2rem;
@@ -1211,10 +1233,10 @@ img {
   position: absolute;
   top: 1rem;
   right: 1rem;
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   display: block;
-  background: url(../images/close-bk.png);
+  background-image: url(../images/close-bk.png);
   background-size: contain;
   background-position: top right;
   background-repeat: no-repeat;
@@ -1293,6 +1315,8 @@ img {
   padding: 5% 0;
   overflow: hidden;
   background-color: white;
+  padding-top: 100px;
+  max-width: 590px;
 }
 @media only screen and (min-width: 481px) and (max-width: 767px) {
   .journal__container {
@@ -1304,6 +1328,11 @@ img {
   .journal__container {
     max-width: 90%;
     padding-top: 5%;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  .journal__container {
+    max-width: 80%;
   }
 }
 .journal__post-list {
@@ -1318,18 +1347,15 @@ img {
   margin-bottom: .5rem;
   text-transform: uppercase;
   letter-spacing: .10rem;
-  font-size: large;
-}
-@media only screen and (max-width: 767px) {
-  .journal__post--date {
-    font-size: small;
-  }
+  font-size: small;
 }
 .journal__post--title {
   margin: 0;
+  font-weight: normal;
 }
 .journal__post--description {
   margin: 0;
+  font-size: medium;
 }
 
 .container {
@@ -1365,12 +1391,7 @@ img {
   margin-bottom: 0.5rem;
   text-transform: uppercase;
   letter-spacing: 0.25rem;
-  font-size: large;
-}
-@media only screen and (max-width: 767px) {
-  .section__title {
-    font-size: medium;
-  }
+  font-size: medium;
 }
 
 .dot {
@@ -1384,7 +1405,12 @@ img {
 .dot__container {
   margin-top: 5rem;
   height: 100px;
-  width: 101%;
+  width: 100%;
+}
+@media only screen and (max-width: 767px) {
+  .dot__container {
+    width: 102%;
+  }
 }
 .dot__container--row {
   height: 20px;

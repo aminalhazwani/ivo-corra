@@ -3,7 +3,7 @@
         @include container;
         padding-top: 5rem;
         @include media-query(palm) {
-            padding-top: 2rem;
+            padding-top: 1rem;
         }
         &:last-child {
             padding-top: 0;
@@ -12,7 +12,7 @@
 
     @include e(tags) {
         @include m(list) {
-            margin: 0;
+            margin: 1rem 0 0 0;
             padding: 0;
 
             list-style-type: none;
@@ -24,7 +24,11 @@
         @include media-query(tabl-and-down) {
             padding: 1rem 1rem 0.75rem 1rem;
         } 
+        
         margin-bottom: 4rem;
+        @include media-query(palm) {
+            margin-bottom: 2rem;
+        }
 
         color: $white;
         background-color: $black;
@@ -47,6 +51,14 @@
             padding: 0;
 
             width: 100%;
+
+            &.new {
+                margin-bottom: 3rem;
+
+                @include media-query(palm) {
+                    margin-bottom: 2rem;
+                }
+            }
         }
     }
 
@@ -119,11 +131,13 @@
             display: none;
             z-index: 99999;
             position: fixed;
-            top: 10px;
-            right: 60px;
+            top: 7px;
+            right: 45px;
             width: 30px;
             height: 30px;
             text-align: center;
+            border-radius: 50%;
+            border: 1px solid $white;
             line-height: 30px;
             color: $white;
             text-decoration: none;
@@ -158,6 +172,8 @@
                 overflow-y: scroll;
                 height: 100%; 
                 h2 {
+                    font-weight: normal;
+                    letter-spacing: 0.15rem;
                     max-width: 80%;
                     line-height: 1.1;
                     margin: 1.5rem 2rem 1rem 2rem;
@@ -183,10 +199,10 @@
             position: absolute;
             top: 1rem;
             right: 1rem;
-            width: 30px;
-            height: 30px;
+            width: 20px;
+            height: 20px;
             display: block;
-            background: url(../images/close-bk.png);
+            background-image: url(../images/close-bk.png);
             background-size: contain;
             background-position: top right;
             background-repeat: no-repeat;
