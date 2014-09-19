@@ -10,3 +10,7 @@ fields:
     title: 
         label: Titolo pagina
         type:  text
+    findmore: 
+        type:  textarea
+        size:  large
+        

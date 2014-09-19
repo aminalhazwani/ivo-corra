@@ -20,7 +20,7 @@
                     <figure class="work__element">
                         <?php foreach($work->images() as $imageLightbox): ?>
                             <a class="work__thumb" href="<?php echo $imageLightbox->url() ?>" data-lightbox="<?php echo $work->title() ?>" data-title="<?php echo $imageLightbox->caption() ?>">
-                                <img src="<?php echo thumb($image, array('height' => 180), false) ?>">
+                                <img src="<?php echo thumb($image, array('height' => 150), false) ?>">
                             </a>
                         <?php endforeach ?>
                         <figcaption><?php echo $work->title() ?></figcaption>
@@ -45,11 +45,11 @@
     <?php endforeach ?>
 
     <div class="works__about">
-        I work in many fields. Take a look down here or scroll directly to a category of you interest!
+        <?php echo $works->findmore() ?>
         <ul class="works__tags--list">
             <?php foreach($tags as $tag): ?>
                 <?php if($tag->name() != 'new'): ?>
-                    <li class="tag__list--item"><a href="#<?php echo $tag->name() ?>"><span class="section__title"><?php echo $tag->name() ?></span></a></li>
+                    <li class="tag__list--item"><a href="#<?php echo $tag->name() ?>"><?php echo $tag->name() ?></a></li>
                 <?php endif ?>
             <?php endforeach ?>
         </ul>
@@ -58,8 +58,8 @@
     <ul class="works__tags--list">
         <?php foreach($tags as $tag): ?>
             <?php if($tag->name() != 'new'): ?>
-            <li class="tags__list--item">
-                <span class="section__title" id="#<?php echo $tag->name() ?>"><?php echo $tag->name() ?></span>
+            <li class="tags__list--item" id="<?php echo $tag->name() ?>">
+                <span class="section__title"><?php echo $tag->name() ?></span>
                 <ul class="tag__name--related-works">
                 <?php 
                 $tagname = $tag->name();
@@ -69,7 +69,7 @@
                         <figure class="work__element">
                             <?php foreach($work->images() as $imageLightbox): ?>
                                 <a class="work__thumb" href="<?php echo $imageLightbox->url() ?>" data-lightbox="<?php echo $work->title() ?>" data-title="<?php echo $imageLightbox->caption() ?>">
-                                    <img src="<?php echo thumb($image, array('height' => 180), false) ?>">
+                                    <img src="<?php echo thumb($image, array('height' => 150), false) ?>">
                                 </a>
                             <?php endforeach ?>
                             <figcaption><?php echo $work->title() ?></figcaption>
@@ -98,23 +98,4 @@
 
 <?php snippet('scripts') ?>
 <?php snippet('contact') ?>
-
-
-/* To be removed */
-<script type="text/javascript">
-    $('.work__info--description').flowtype({
-       minimum   : 300,
-       maximum   : 1000,
-       minFont   : 16,
-       maxFont   : 16
-    });
-
-    $('.works__about').flowtype({
-       minimum   : 300,
-       maximum   : 1000,
-       minFont   : 16,
-       maxFont   : 16
-    });
-</script>
-
 <?php snippet('foot') ?>
