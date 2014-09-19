@@ -1,20 +1,10 @@
 .credit__container {
-    max-width: 70%;
-    margin: 0 auto;
-    padding: 5% 0;
-    overflow: hidden;
+    @include container;
 
-    background-color: $white;
-
+    padding-top: 100px;
+    max-width: 590px;
     @include media-query(tabl) {
         max-width: 80%;
-
-        padding-top: 10%;
-    }
-
-    @include media-query(palm) {
-        max-width: 90%;
-        padding-top: 5%;
     }
 }
 
@@ -78,7 +68,7 @@
 
 .publications {
     ul {
-        margin: 0 0 0 -2rem;
+        margin: 0 0 0 -1rem;
         padding: 0;
 
 
@@ -92,9 +82,9 @@
 
 .publication {
     display: inline-block;
-    width: 43%;
+    width: calc(50% - 2rem);
     margin-bottom: 2rem;
-    padding-left: 2rem;
+    padding-left: 1rem;
 
     &:last-child {
         margin-bottom: 0;

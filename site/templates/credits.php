@@ -55,8 +55,8 @@
                         <span><?php echo $publication->title() ?></span>,
                         <span><?php echo $publication->date('M. Y') ?></span>,
                         <span><?php echo $publication->editor() ?></span>
-                    </li>
-                <?php endforeach ?>
+                    </li><!--
+                --><?php endforeach ?>
             </ul>
         </section>
 

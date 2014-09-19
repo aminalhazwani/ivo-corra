@@ -942,6 +942,8 @@ img {
   padding: 5% 0;
   overflow: hidden;
   background-color: white;
+  padding-top: 100px;
+  max-width: 590px;
 }
 @media only screen and (min-width: 481px) and (max-width: 767px) {
   .credit__container {
@@ -953,6 +955,11 @@ img {
   .credit__container {
     max-width: 90%;
     padding-top: 5%;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  .credit__container {
+    max-width: 80%;
   }
 }
 
@@ -1003,7 +1010,7 @@ img {
 }
 
 .publications ul {
-  margin: 0 0 0 -2rem;
+  margin: 0 0 0 -1rem;
   padding: 0;
   list-style-type: none;
 }
@@ -1015,9 +1022,10 @@ img {
 
 .publication {
   display: inline-block;
-  width: 43%;
+  width: -webkit-calc(50% - 2rem);
+  width: calc(50% - 2rem);
   margin-bottom: 2rem;
-  padding-left: 2rem;
+  padding-left: 1rem;
 }
 .publication:last-child {
   margin-bottom: 0;
