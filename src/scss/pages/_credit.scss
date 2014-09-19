@@ -109,12 +109,6 @@
 
         &:first-child {
             display: block;
-
-            background-color: $black;
-            background-image: url(../images/loading.gif);
-            background-position: 50% 50%;
-            background-size: 68px 24px;
-            background-repeat: no-repeat;
         }
     }
 }
