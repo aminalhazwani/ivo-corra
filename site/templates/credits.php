@@ -70,16 +70,5 @@
     </div>
 
 <?php snippet('scripts') ?>
-
 <?php snippet('contact') ?>
-
-<script type="text/javascript">
-$('.clients__list, .exhibition__title').flowtype({
-   minimum   : 500,
-   maximum   : 1200,
-   minFont   : 18,
-   maxFont   : 22
-});
-</script>
-
 <?php snippet('foot') ?>

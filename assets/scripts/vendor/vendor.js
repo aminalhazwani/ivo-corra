@@ -1,51 +1,3 @@
-/*
-* FlowType.JS v1.1
-* Copyright 2013-2014, Simple Focus http://simplefocus.com/
-*
-* FlowType.JS by Simple Focus (http://simplefocus.com/)
-* is licensed under the MIT License. Read a copy of the
-* license in the LICENSE.txt file or at
-* http://choosealicense.com/licenses/mit
-*
-* Thanks to Giovanni Difeterici (http://www.gdifeterici.com/)
-*/
-
-(function($) {
-   $.fn.flowtype = function(options) {
-
-// Establish default settings/variables
-// ====================================
-      var settings = $.extend({
-         maximum   : 9999,
-         minimum   : 1,
-         maxFont   : 9999,
-         minFont   : 1,
-         fontRatio : 35
-      }, options),
-
-// Do the magic math
-// =================
-      changes = function(el) {
-         var $el = $(el),
-            elw = $el.width(),
-            width = elw > settings.maximum ? settings.maximum : elw < settings.minimum ? settings.minimum : elw,
-            fontBase = width / settings.fontRatio,
-            fontSize = fontBase > settings.maxFont ? settings.maxFont : fontBase < settings.minFont ? settings.minFont : fontBase;
-         $el.css('font-size', fontSize + 'px');
-      };
-
-// Make the magic visible
-// ======================
-      return this.each(function() {
-      // Context for resize callback
-         var that = this;
-      // Make changes upon resize
-         $(window).resize(function(){changes(that);});
-      // Set changes on load
-         changes(this);
-      });
-   };
-}(jQuery));
 /*! Hammer.JS - v2.0.2 - 2014-07-28
  * http://hammerjs.github.io/
  *
@@ -76,7 +28,7 @@
       this.positionFromTop             = 0;
       this.showImageNumberLabel        = true;
       this.alwaysShowNavOnTouchDevices = false;
-      this.wrapAround                  = false;
+      this.wrapAround                  = true;
     }
     
     // Change to localize to non-english language
@@ -118,7 +70,7 @@
     // Attach event handlers to the new DOM elements. click click click
     Lightbox.prototype.build = function() {
       var self = this;
-      $("<div id='lightboxOverlay' class='lightboxOverlay'><div class='spinner'><div class='bounce1'></div><div class='bounce2'></div><div class='bounce3'></div></div><div class='lb-closeContainer'><a class='lb-close'></a></div></div></div><div id='lightbox' class='lightbox'><div class='lb-outerContainer'><div class='lb-container'><img class='lb-image' src='' /><div class='lb-nav'><a class='lb-prev' href='' ></a><a class='lb-next' href='' ></a></div><div class='lb-loader'><a class='lb-cancel'></a></div></div></div><div class='lb-dataContainer'><div class='lb-data'><div class='lb-details'><span class='lb-caption'></span><span class='lb-number'></span></div></div></div></div>").appendTo($('body'));
+      $("<div id='lightboxOverlay' class='lightboxOverlay'><div class='spinner'><div class='bounce1'></div><div class='bounce2'></div><div class='bounce3'></div></div><div class='lb-closeContainer'><a class='lb-close'></a></div></div></div><div id='lightbox' class='lightbox'><div class='lb-outerContainer'><div class='lb-container'><img class='lb-image fade-img' src='' /><div class='lb-nav'><a class='lb-prev' href='' ></a><a class='lb-next' href='' ></a></div><div class='lb-loader'><a class='lb-cancel'></a></div></div></div><div class='lb-dataContainer'><div class='lb-data'><div class='lb-details'><span class='lb-caption'></span><span class='lb-number'></span></div></div></div></div>").appendTo($('body'));
       
       // Cache jQuery objects
       this.$lightbox       = $('#lightbox');
@@ -370,7 +322,7 @@
     // Display the image and it's details and begin preload neighboring images.
     Lightbox.prototype.showImage = function() {
       this.$lightbox.find('.lb-loader').hide();
-      this.$lightbox.find('.lb-image').fadeIn();
+      this.$lightbox.find('.lb-image').fadeIn(2000);
     
       this.updateNav();
       this.updateDetails();
