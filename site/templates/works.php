@@ -11,7 +11,7 @@
     <?php foreach($tags as $tag): ?>
         <?php if($tag->name() == 'new'): ?>
             <span class="section__title flash"><?php echo $tag->name() ?></span>
-            <ul class="tag__name--related-works" style="margin-bottom: 3rem">
+            <ul class="tag__name--related-works new">
             <?php 
             $tagname = $tag->name();
             foreach($works->children()->filterBy('tags', $tagname, ',') as $work): ?>
@@ -20,7 +20,7 @@
                     <figure class="work__element">
                         <?php foreach($work->images() as $imageLightbox): ?>
                             <a class="work__thumb" href="<?php echo $imageLightbox->url() ?>" data-lightbox="<?php echo $work->title() ?>" data-title="<?php echo $imageLightbox->caption() ?>">
-                                <img src="<?php echo thumb($image, array('height' => 150), false) ?>">
+                                <img id="fadeIn" src="<?php echo thumb($image, array('height' => 150), false) ?>">
                             </a>
                         <?php endforeach ?>
                         <figcaption><?php echo $work->title() ?></figcaption>
@@ -69,7 +69,7 @@
                         <figure class="work__element">
                             <?php foreach($work->images() as $imageLightbox): ?>
                                 <a class="work__thumb" href="<?php echo $imageLightbox->url() ?>" data-lightbox="<?php echo $work->title() ?>" data-title="<?php echo $imageLightbox->caption() ?>">
-                                    <img src="<?php echo thumb($image, array('height' => 150), false) ?>">
+                                    <img id="fadeIn" src="<?php echo thumb($image, array('height' => 150), false) ?>">
                                 </a>
                             <?php endforeach ?>
                             <figcaption><?php echo $work->title() ?></figcaption>
