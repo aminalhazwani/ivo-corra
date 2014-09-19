@@ -466,7 +466,7 @@ body {
   opacity: 1;
   top: 1rem;
   width: 2.5rem;
-  height: 0.2rem;
+  height: 0.15rem;
   background-color: black;
   content: " ";
 }
@@ -915,6 +915,9 @@ img {
   .about__container {
     max-width: 80%;
   }
+}
+.about__container p {
+  padding-right: 1rem;
 }
 .about__container p:first-child {
   margin-top: 0;
