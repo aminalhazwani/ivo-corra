@@ -27,18 +27,18 @@
 
       li > a {
           display: block;
-          font-size: 2.5rem;
-          letter-spacing: 0.75rem;
+          font-size: 2.5em;
+          letter-spacing: 0.75em;
           text-transform: uppercase;
           text-align: center;
           text-decoration: none;
           color: #fff;
-          margin: 2rem;
+          margin: 2em;
 
           @include media-query(tabl-and-down) {
-            letter-spacing: 0.5rem;
-            font-size: 1.8rem;
-            margin: 1.5rem;
+            letter-spacing: 0.5em;
+            font-size: 1.8em;
+            margin: 1.5em;
           }
       }
     }
@@ -55,8 +55,8 @@ and (min-device-width : 320px)
 and (max-device-width : 568px) 
 and (orientation : landscape) {
   .menu__container--list li > a {
-    font-size: 2rem;
-    margin: 0.5rem;
+    font-size: 2em;
+    margin: 0.5em;
   }
   .active {
     transform: rotate(-5deg);

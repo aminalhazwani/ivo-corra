@@ -1,7 +1,7 @@
 .container {
     position: relative;
     max-width: 90%;
-    padding-top: 5rem;
+    padding-top: 5em;
     margin: 0 auto;
 
     &.is-hidden {
@@ -29,16 +29,16 @@
 .section__title {
     display: block;
 
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.5em;
 
     text-transform: uppercase;
-    letter-spacing: 0.25rem;
+    letter-spacing: 0.25em;
     font-size: medium;
 }
 
 .dot {
     @include e(container) {
-        margin-top: 5rem;
+        margin-top: 5em;
         height: 100px; 
         width: 100%;
         @include media-query(tabl-and-down) {

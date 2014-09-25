@@ -8,7 +8,7 @@
     }
 
     p {
-        padding-right: 1rem;
+        padding-right: 1em;
         
         &:first-child {
             margin-top: 0;
@@ -19,9 +19,9 @@
         }
         &:before {
             content: " ";
-            margin: 0 0 0 3rem;
+            margin: 0 0 0 3em;
             @include media-query(palm) {
-                margin: 0 0 0 2rem;
+                margin: 0 0 0 2em;
             }
         }
     }
