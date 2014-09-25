@@ -4,7 +4,7 @@
 
 title: Page
 pages: 
-    template: journal
+    template: post
 files: false
 fields:
     title: 
