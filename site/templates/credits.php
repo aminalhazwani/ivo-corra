@@ -52,9 +52,11 @@
                         </figure>
                         <?php endif ?>
 
-                        <span><?php echo $publication->title() ?></span>,
-                        <span><?php echo $publication->date('M. Y') ?></span>,
-                        <span><?php echo $publication->editor() ?></span>
+                        <p>
+                            <?php echo $publication->title() ?>,
+                            <?php echo $publication->date('M. Y') ?>,
+                            <?php echo $publication->editor() ?>
+                        </p>
                     </li><!--
                 --><?php endforeach ?>
             </ul>

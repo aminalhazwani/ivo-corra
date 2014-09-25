@@ -9,7 +9,7 @@
 }
 
 .clients  {
-    margin-bottom: 5rem; 
+    margin-bottom: 5em; 
 
     @include e(list) {
         margin: 0;
@@ -32,7 +32,7 @@
 }
 
 .exhibitions  {
-    margin-bottom: 5rem; 
+    margin-bottom: 5em; 
 
     @include e(list) {
         margin: 0;
@@ -41,7 +41,7 @@
         list-style-type: none;
 
         @include m(item) {
-            margin-bottom: 2rem;
+            margin-bottom: 2em;
         }
     }
 }
@@ -61,14 +61,14 @@
     }
 
     @include e(date) {
-        margin-right: 1rem;
+        margin-right: 1em;
         font-size: small;
     }
 }
 
 .publications {
     ul {
-        margin: 0 0 0 -1rem;
+        margin: 0 0 0 -1em;
         padding: 0;
 
 
@@ -82,9 +82,10 @@
 
 .publication {
     display: inline-block;
-    width: calc(50% - 2rem);
-    margin-bottom: 2rem;
-    padding-left: 1rem;
+    vertical-align: top;
+    width: calc(50% - 2em);
+    margin: 0.5em 0 1.5em 0;
+    padding-left: 1em;
 
     &:last-child {
         margin-bottom: 0;
@@ -97,10 +98,11 @@
 
     figure {
         line-height: 0;
-        margin-bottom: 0.25rem;
+        margin-bottom: 0.25em;
     }
 
-    span {
+    p {
+        margin-bottom: 0;
         font-size: small;
     }
 
