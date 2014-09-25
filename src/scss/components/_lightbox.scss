@@ -137,7 +137,7 @@ body:after {
 }
 
 .lb-data {
-  padding: 0.5em 0 0 0;
+  padding: 0.5rem 0 0 0;
   color: #ccc;
   display: none;
 }
@@ -151,18 +151,18 @@ body:after {
 }
 
 .lb-data .lb-caption {
-  font-size: 1em;
+  font-size: 1rem;
   font-weight: bold;
-  line-height: 1em;
+  line-height: 1rem;
   @include media-query (palm) {
-    font-size: 0.85em;
+    font-size: 0.85rem;
   }
 }
 
 .lb-data .lb-number {
   display: none!important;
   clear: left;
-  padding-bottom: 1em;
+  padding-bottom: 1rem;
   font-size: 12px;
   color: #999999;
 }

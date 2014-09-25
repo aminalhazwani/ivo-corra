@@ -9,7 +9,7 @@
 }
 
 .clients  {
-    margin-bottom: 5em; 
+    margin-bottom: 5rem; 
 
     @include e(list) {
         margin: 0;
@@ -32,7 +32,7 @@
 }
 
 .exhibitions  {
-    margin-bottom: 5em; 
+    margin-bottom: 5rem; 
 
     @include e(list) {
         margin: 0;
@@ -41,7 +41,7 @@
         list-style-type: none;
 
         @include m(item) {
-            margin-bottom: 2em;
+            margin-bottom: 2rem;
         }
     }
 }
@@ -83,9 +83,9 @@
 .publication {
     display: inline-block;
     vertical-align: top;
-    width: calc(50% - 2em);
-    margin: 0.5em 0 1.5em 0;
-    padding-left: 1em;
+    width: calc(50% - 2rem);
+    margin: 0.5rem 0 1.5rem 0;
+    padding-left: 1rem;
 
     &:last-child {
         margin-bottom: 0;
@@ -98,7 +98,7 @@
 
     figure {
         line-height: 0;
-        margin-bottom: 0.25em;
+        margin-bottom: 0.25rem;
     }
 
     p {

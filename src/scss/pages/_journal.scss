@@ -17,12 +17,12 @@
     }
 
     @include e(post) {
-        margin-bottom: 2em;
+        margin-bottom: 2rem;
 
         @include m(date) {
-            margin-bottom: .5em;
+            margin-bottom: .5rem;
             text-transform: uppercase;
-            letter-spacing: .10em;
+            letter-spacing: .10rem;
             font-size: small;
         }
 

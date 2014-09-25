@@ -36,7 +36,7 @@
       }
 
       a {
-        padding-bottom: 0.25em;
+        padding-bottom: 0.25rem;
 
         text-decoration: none;
         color: $black;
@@ -44,18 +44,18 @@
       }
 
       div {
-        margin-bottom: 2em;
+        margin-bottom: 2rem;
       }
 
       @include media-query(tabl) {
         div {
-          margin-bottom: 1.5em;
+          margin-bottom: 1.5rem;
         }
       }
 
       @include media-query(palm) {
         div {
-          margin-bottom: 1em;
+          margin-bottom: 1rem;
         }
       }
     }
