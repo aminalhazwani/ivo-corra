@@ -17,14 +17,16 @@
             foreach($works->children()->filterBy('tags', $tagname, ',') as $work): ?>
                 <li class="related-works__item">
                     <?php $image = $work->images()->first(); ?>
-                    <figure class="work__element">
-                        <?php foreach($work->images() as $imageLightbox): ?>
-                            <a class="work__thumb" href="<?php echo $imageLightbox->url() ?>" data-lightbox="<?php echo $work->title() ?>" data-title="<?php echo $imageLightbox->caption() ?>">
-                                <img id="fadeIn" src="<?php echo thumb($image, array('height' => 150), false) ?>">
-                            </a>
-                        <?php endforeach ?>
-                        <figcaption><?php echo $work->title() ?></figcaption>
-                    </figure>
+
+                    <?php foreach($work->images() as $imageLightbox): ?>
+                    <a class="work__thumb" href="<?php echo $imageLightbox->url() ?>" data-lightbox="<?php echo $work->title() ?>" data-title="<?php echo $imageLightbox->caption() ?>">
+                        <figure class="work__element">
+                            <div class="work__element--container"><img src="<?php echo thumb($image, array('height' => 260), false) ?>"></div>
+                            <figcaption><?php echo $work->title() ?></figcaption>
+                        </figure>
+                    </a>
+                    <?php endforeach ?>
+                    
                     <?php if($work->text() != ''): ?>
                         <div class="work__info">
                             <a class="work__info--button" href="#">i</a>
@@ -66,14 +68,16 @@
                 foreach($works->children()->filterBy('tags', $tagname, ',') as $work): ?>
                     <li class="related-works__item">
                         <?php $image = $work->images()->first(); ?>
-                        <figure class="work__element">
-                            <?php foreach($work->images() as $imageLightbox): ?>
-                                <a class="work__thumb" href="<?php echo $imageLightbox->url() ?>" data-lightbox="<?php echo $work->title() ?>" data-title="<?php echo $imageLightbox->caption() ?>">
-                                    <img id="fadeIn" src="<?php echo thumb($image, array('height' => 150), false) ?>">
-                                </a>
-                            <?php endforeach ?>
-                            <figcaption><?php echo $work->title() ?></figcaption>
-                        </figure>
+                        
+                        <?php foreach($work->images() as $imageLightbox): ?>
+                        <a class="work__thumb" href="<?php echo $imageLightbox->url() ?>" data-lightbox="<?php echo $work->title() ?>" data-title="<?php echo $imageLightbox->caption() ?>">
+                            <figure class="work__element">
+                                <div class="work__element--container"><img src="<?php echo thumb($image, array('height' => 260), false) ?>"></div>
+                                <figcaption><?php echo $work->title() ?></figcaption>
+                            </figure>
+                        </a>
+                        <?php endforeach ?>
+
                         <?php if($work->text() != ''): ?>
                             <div class="work__info">
                                 <a class="work__info--button" href="#">i</a>
