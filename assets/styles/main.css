@@ -1081,25 +1081,28 @@ img {
   padding-top: 0;
 }
 .works__tags--list {
-  margin: 1rem 0 0 0;
+  margin: 0;
   padding: 0;
   list-style-type: none;
 }
 .works__about {
-  padding: 2rem 2rem 1.75rem 2rem;
+  padding: 2rem;
   margin-bottom: 4rem;
   color: white;
   background-color: black;
 }
 @media only screen and (max-width: 767px) {
   .works__about {
-    padding: 1rem 1rem 0.75rem 1rem;
+    padding: 1rem;
   }
 }
 @media only screen and (max-width: 480px) {
   .works__about {
     margin-bottom: 2rem;
   }
+}
+.works__about p {
+  margin: 0 0 1rem 0;
 }
 
 .tags__list--item {

@@ -45,7 +45,7 @@
     <?php endforeach ?>
 
     <div class="works__about">
-        <?php echo $works->findmore() ?>
+        <p><?php echo $works->findmore() ?></p>
         <ul class="works__tags--list">
             <?php foreach($tags as $tag): ?>
                 <?php if($tag->name() != 'new'): ?>
