@@ -71,7 +71,7 @@ RewriteBase /subfolder
  
 */
 
-c::set('subfolder', '/ivo-corra');
+# c::set('subfolder', '/ivo-corra');
 
 
 /* 
