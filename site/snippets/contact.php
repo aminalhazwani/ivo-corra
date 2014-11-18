@@ -10,7 +10,7 @@
       <p>Mob. <?php $about = $pages->find('about'); echo $about->mobile(); ?></p>
       <p>Tel. <?php $about = $pages->find('about'); echo $about->phone(); ?></p>
       <a href="mailto:<?php $about = $pages->find('about'); echo $about->mail(); ?>">
-        <?php $about = $pages->find('about'); echo $about->mail(); ?>
+        <?php $about = $pages->find('about'); echo $about->botmail(); ?>
       </a>
     </div>
 
@@ -20,7 +20,7 @@
     </div>
 
     <div class="contact__container--colophone">
-      <a href="http://aminalhazwani.github.io">
+      <a href="http://aminalhazwani.com">
         <span class="pile-of-poo">Made with &#9829; in Italy</span>
       </a>
     </div>
