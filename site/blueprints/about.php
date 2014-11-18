@@ -32,6 +32,9 @@ fields:
     mail: 
         label: Indirizzo Email
         type:  text
+    botmail: 
+        label: Indirizzo Email per SPAMMER
+        type:  text
     fiscal: 
         label: Codice Fiscale
         type:  text

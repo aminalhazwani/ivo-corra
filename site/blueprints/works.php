@@ -5,7 +5,7 @@
 title: Page
 pages: 
     template: work
-files: true
+files: false
 fields:
     title: 
         label: Titolo pagina

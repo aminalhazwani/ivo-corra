@@ -20,7 +20,7 @@
     }
 
     @include e(about) {
-        padding: 2rem;
+        padding: 1.3rem 2rem 2rem 2rem;
         @include media-query(tabl-and-down) {
             padding: 1rem;
         } 
@@ -34,7 +34,11 @@
         background-color: $black;
 
         p {
-            margin: 0 0 1rem 0;
+            margin: 0.6rem 0 1rem 0;
+
+            @include media-query(tabl-and-down) {
+                margin: 0 0 0.5rem 0;
+            }
         }
     }
 }
@@ -70,6 +74,7 @@
         @include m(item) {
             display: inline-block;
             margin-right: 1rem;
+            padding: 0.5rem 0 0 0;
 
             a {
                 display: block;

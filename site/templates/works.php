@@ -27,7 +27,7 @@
                     </a>
                     <?php endforeach ?>
                     
-                    <?php if($work->text() != ''): ?>
+                    <?php if($work->text()->kirbytext() != ''): ?>
                         <div class="work__info">
                             <a class="work__info--button" href="#">i</a>
                             <div class="work__info--description">
@@ -47,7 +47,9 @@
     <?php endforeach ?>
 
     <div class="works__about">
-        <p><?php echo $works->findmore() ?></p>
+        <?php if($works->findmore() != ''): ?>
+            <p><?php echo $works->findmore() ?></p>
+        <?php endif ?>
         <ul class="works__tags--list">
             <?php foreach($tags as $tag): ?>
                 <?php if($tag->name() != 'new'): ?>

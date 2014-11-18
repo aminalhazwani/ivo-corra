@@ -1,6 +1,6 @@
 <?php if(!defined('KIRBY')) exit ?>
 
-# works blueprint
+# work blueprint
 
 title: Page
 pages: false
@@ -10,7 +10,7 @@ fields:
         label: Titolo progetto
         type:  text
     home: 
-        label: Lavoro in homepage
+        label: Lavoro in homepage?
         type: radio
         options:
             ja:  Inserisci
@@ -23,15 +23,16 @@ fields:
         label: Testo del progetto
         type:  textarea
         size:  large
-        buttons:
-            - h3
-            - bold
-            - italic
-            - link
-filefields: 
+files:
+  sortable: true
+  fields: 
     caption: 
-        label: Didascalia foto
-        type: text
+      label: Didascalia foto
+      type: text
     inserisci:
-        label: Foto in homepage? 
-        type: text
+      type: radio
+      label: Inserisci la foto nello slideshow in homepage?
+      options:
+          ja:  Inserisci
+          nein: Non inserisci
+      default: ja
