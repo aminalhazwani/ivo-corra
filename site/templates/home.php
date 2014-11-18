@@ -12,7 +12,7 @@
         <div class="work"> 
             <?php $img = $work->images()->first(); ?>
             <?php foreach($work->images() as $image): ?>
-                <?php if($image->inserisci() != ''): ?>
+                <?php if($image->inserisci() == 'ja'): ?>
                     <a class="box" href="<?php echo $image->url() ?>" data-lightbox="<?php echo $work->title() ?>" data-title="<?php echo $image->caption() ?>">
                         <img src="<?php echo thumb($image, array('width' => 400), false) ?>" alt="<?php echo $work->title() ?>">
                     </a>

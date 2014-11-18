@@ -1,8 +1,10 @@
-﻿Title: About
+Title: About
 
 ----
 
-Bio: Frank Chimero is a designer, illustrator, and writer. His practice focuses on design systems that bridge digital and analog formats, using the qualities of each to the other's advantage. This method also extends to his personal work and publishing projects. In 2011, he was honored with the Art Directors Club Young Guns award and featured in *Print Magazine's* New Visual Artist issue, highlighting twenty designers under the age of thirty.
+Bio: 
+
+Frank Chimero is a designer, illustrator, and writer. His practice focuses on design systems that bridge digital and analog formats, using the qualities of each to the other's advantage. This method also extends to his personal work and publishing projects. In 2011, he was honored with the Art Directors Club Young Guns award and featured in *Print Magazine's* New Visual Artist issue, highlighting twenty designers under the age of thirty.
 
 As a teacher, Frank worked with undergraduates at Portland State and Missouri State University, and taught typography, design systems, information design, and thesis courses. He also taught thesis development at SVA's MFA in Interaction Design program. Since then, he's been doing workshops at schools around the country.
 
@@ -41,3 +43,7 @@ Fiscal: CRRVIO69D20A952T
 ----
 
 Vat: 02411290212
+
+----
+
+Botmail: ivo.corra&#60;at&#62;yahoo.com

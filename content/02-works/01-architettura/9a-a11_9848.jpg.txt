@@ -1,5 +1,5 @@
-﻿Caption: Una stanza vuota
+Caption: Una stanza vuota
 
 ----
 
-Inserisci: si
+Inserisci: ja

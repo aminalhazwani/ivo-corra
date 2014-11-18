@@ -1,5 +1,5 @@
-﻿Caption: Un auditorium vuoto
+Caption: Un auditorium vuoto
 
 ----
 
-Inserisci: si
+Inserisci: ja

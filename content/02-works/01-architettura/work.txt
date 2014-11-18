@@ -1,4 +1,4 @@
-﻿Title: Architettura
+Title: Architettura
 
 ----
 
@@ -7,3 +7,7 @@ Tags: commercial
 ----
 
 Home: ja
+
+----
+
+Text: 

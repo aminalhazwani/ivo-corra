@@ -1,4 +1,4 @@
-﻿Title: Baci
+Title: Baci
 
 ----
 
@@ -7,3 +7,7 @@ Home: ja
 ----
 
 Tags: personal
+
+----
+
+Text: 

@@ -1,5 +1,13 @@
-﻿Title: Funivia
+Title: Funivia
 
 ----
 
 Home: ja
+
+----
+
+Tags: commercial
+
+----
+
+Text: Testo del progetto della funivia.
