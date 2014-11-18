@@ -23,7 +23,7 @@ $( document ).ready(function () {
       $('.lb-prev').addClass('activated');
     });
 
-    $('.work__element').click(function(){
+    $('.work__thumb').click(function(){
         $(this).next('.work__info').addClass('is-active');
     });
 
