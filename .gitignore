@@ -1,4 +1,5 @@
 .sass-cache
 node_modules
-site/panel/accounts/ivo.php
+site/accounts/admin.php
+site/accounts/ivo.php
 thumbs
