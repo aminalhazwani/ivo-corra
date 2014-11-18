@@ -10,4 +10,5 @@ $desk-wide-start:   1200px;
 
 $palm-end:     $tabl-start - 1px;
 $tabl-end:     $lap-start - 1px;
-$lab-end:      $desk-start -1px;
+$lap-end:      $desk-start - 1px;
+$desk-end:     $desk-wide-start - 1px;

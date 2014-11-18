@@ -38,7 +38,7 @@
 
 .dot {
     @include e(container) {
-        margin-top: 5rem;
+        margin: 5rem 0 3rem 0;
         height: 100px; 
         width: 100%;
         @include media-query(tabl-and-down) {
