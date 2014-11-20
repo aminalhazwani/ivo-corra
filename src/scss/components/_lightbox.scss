@@ -101,13 +101,6 @@ body:after {
   width: 50%;
   left: 0;
   float: left;
-  background-image: url(../images/prev.png);
-  background-repeat: no-repeat;
-  background-position: 5% 50%;
-  background-size: 40px 40px;
-  @include media-query(table-and-down) {
-    background-size: 30px 30px;
-  }
 }
 
 
@@ -115,13 +108,6 @@ body:after {
   width: 50%;
   right: 0;
   float: right;
-  background-image: url(../images/next.png);
-  background-repeat: no-repeat;
-  background-position: 95% 50%;
-  background-size: 40px 40px;
-  @include media-query(table-and-down) {
-    background-size: 30px 30px;
-  }
 }
 
 .lb-dataContainer {
@@ -194,4 +180,47 @@ body:after {
 .lb-data .lb-close:hover {
   cursor: pointer;
   opacity: 1;
+}
+
+/* Arrows */
+
+.arrows {
+  display: none;
+  &.visible {
+    display: block;
+  }
+}
+
+.prev-pic {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 999999;
+
+  width: 50%;
+  height: 10%;
+  margin-bottom: 13px;
+  margin-left: 10px;
+
+  background-image: url(../images/prev.png);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: 30px 30px;
+}
+
+.next-pic {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 999999;
+
+  width: 50%;
+  height: 10%;
+  margin-bottom: 13px;
+  margin-right: 10px;
+
+  background-image: url(../images/next.png);
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: 30px 30px;
 }

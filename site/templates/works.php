@@ -102,6 +102,7 @@
     </ul>
 </div>
 
+<?php snippet('arrows') ?>
 <?php snippet('scripts') ?>
 <?php snippet('contact') ?>
 <?php snippet('foot') ?>

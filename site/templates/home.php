@@ -22,7 +22,7 @@
     <?php endif ?>
     <?php endforeach ?>
 </div>
-
+<?php snippet('arrows') ?>
 <?php snippet('scripts') ?>
 <?php snippet('contact') ?>
 <script src="assets/scripts/home.min.js"></script>

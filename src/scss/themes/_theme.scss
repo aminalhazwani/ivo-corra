@@ -36,6 +36,10 @@
     font-size: medium;
 }
 
+a {
+    outline: 0!important;
+}
+
 .dot {
     @include e(container) {
         margin: 5rem 0 3rem 0;

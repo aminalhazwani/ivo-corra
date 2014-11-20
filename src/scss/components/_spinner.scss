@@ -7,7 +7,7 @@
   background-color: $white;
 }
 
-.spinner {
+.spinner, .spinner-white {
   margin: 0 auto;
   width: 100%;
   text-align: center;
@@ -17,10 +17,9 @@
   transform: translateY(-50%);
 }
 
-.spinner > div {
+.spinner > div, .spinner-white > div {
   width: 18px;
   height: 18px;
-  background-color: $black;
   margin: 0.1rem;
 
   border-radius: 100%;
@@ -32,12 +31,21 @@
   animation-fill-mode: both;
 }
 
-.spinner .bounce1 {
+.spinner > div {
+    background-color: $black;
+}
+
+.spinner-white > div {
+  background-color: $white;
+}
+
+
+.spinner .bounce1, .spinner-white .bounce1 {
   -webkit-animation-delay: -0.32s;
   animation-delay: -0.32s;
 }
 
-.spinner .bounce2 {
+.spinner .bounce2, .spinner-white .bounce2 {
   -webkit-animation-delay: -0.16s;
   animation-delay: -0.16s;
 }

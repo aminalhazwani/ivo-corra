@@ -1,4 +1,5 @@
 $( document ).ready(function () {
+
     $('.work').css({opacity: 1});
 
     $('.menu__toogle').click(function(){
@@ -34,6 +35,7 @@ $( document ).ready(function () {
     $('.work__info--close').click(function(){
         $('.work__info--description').removeClass('is-open');
     });
+
 
     $(function() {
       $('a[href*=#]:not([href=#])').click(function() {

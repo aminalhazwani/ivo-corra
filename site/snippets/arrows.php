@@ -1,0 +1,1 @@
+<div class="arrows"><a href="#" class="prev-pic"></a><a href="#" class="next-pic"></a></div>
