@@ -1,11 +1,5 @@
 .credit__container {
-    @include container;
-
-    padding-top: 100px;
-    max-width: 590px;
-    @include media-query(tabl) {
-        max-width: 80%;
-    }
+    @include container();
 }
 
 .clients  {
@@ -68,7 +62,7 @@
 
 .publications {
     ul {
-        margin: 0 0 0 -1em;
+        margin: 0 0 0 -1rem;
         padding: 0;
 
 
