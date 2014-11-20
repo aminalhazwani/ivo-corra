@@ -27,7 +27,7 @@ files:
   sortable: true
   fields: 
     caption: 
-      label: Didascalia foto
+      label: Didascalia della foto
       type: text
     inserisci:
       type: radio
