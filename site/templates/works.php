@@ -29,7 +29,7 @@
                     
                     <?php if($work->text()->kirbytext() != ''): ?>
                         <div class="work__info">
-                            <a class="work__info--button" href="#">i</a>
+                            <a class="work__info--button" href="#">Description</a>
                             <div class="work__info--description">
                                 <div class="work__info--content">
                                     <h2><?php echo $work->title() ?></h2>
@@ -82,7 +82,7 @@
 
                         <?php if($work->text() != ''): ?>
                             <div class="work__info">
-                                <a class="work__info--button" href="#">i</a>
+                                <a class="work__info--button" href="#">Description</a>
                                 <div class="work__info--description">
                                     <div class="work__info--content">
                                         <h2><?php echo $work->title() ?></h2>
