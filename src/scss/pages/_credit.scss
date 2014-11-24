@@ -95,9 +95,20 @@
         margin-bottom: 0.25rem;
     }
 
-    p {
-        margin: 0;
+    @include e(meta) {
+        margin: 0 0.5rem 0 0;
         font-size: small;
+        float: left;
+
+        &:after {
+            content: ", ";
+        }
+
+        &:last-child {
+            &:after {
+                content: " ";
+            }  
+        }
     }
 
     a {

@@ -30,7 +30,7 @@
                         </span>
 
                         <?php if($exhibition->link() != ''): ?>
-                        <a class="exhibition__link" href="<?php echo $exhibition->link() ?>">link &#8594;</a>
+                            <a class="exhibition__link" href="<?php echo $exhibition->link() ?>">link &#8594;</a>
                         <?php endif ?>
                     </li>
                 <?php endforeach ?>
@@ -52,11 +52,29 @@
                         </figure>
                         <?php endif ?>
 
-                        <p>
-                            <?php echo $publication->title() ?>,
-                            <?php echo $publication->date('M. Y') ?>,
-                            <?php echo $publication->editor() ?>
-                        </p>
+                        <?php if($publication->title() != ''): ?>
+                            <p class="publication__meta"><?php echo $publication->title() ?></p>
+                        <?php endif ?>
+                        <?php if($publication->date() != ''): ?>
+                            <p class="publication__meta"><?php echo $publication->date('M. Y') ?></p>
+                        <?php endif ?>
+                        <?php if($publication->editor() != ''): ?>
+                            <p class="publication__meta"><?php echo $publication->editor() ?></p>
+                        <?php endif ?>
+
+                        <?php if($publication->text() != ''): ?>
+                            <div class="work__info">
+                                <a class="work__info--button" href="#">Description</a>
+                                <div class="work__info--description">
+                                    <div class="work__info--content">
+                                        <h2><?php echo $publication->title() ?></h2>
+                                        <p><?php echo $publication->text() ?></p>
+                                    </div>
+                                    <div class="work__info--gradient"></div>
+                                    <a class="work__info--close" href="#"></a>
+                                </div>
+                            </div>
+                        <?php endif ?>
                     </li><!--
                 --><?php endforeach ?>
             </ul>
@@ -71,6 +89,7 @@
         </div>
     </div>
 
+<?php snippet('arrows') ?>
 <?php snippet('scripts') ?>
 <?php snippet('contact') ?>
 <?php snippet('foot') ?>

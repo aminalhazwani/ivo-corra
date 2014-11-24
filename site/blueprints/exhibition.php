@@ -9,12 +9,10 @@ fields:
     title: 
         label: Titolo della mostra
         type:  text
-        required: true
     date: 
         label: Data di inizio
         type:  date
         format: dd.mm.yy
-        required: true
     enddate: 
         label: Data di fine
         type:  date
@@ -22,7 +20,6 @@ fields:
     place: 
         label: Luogo della mostra
         type:  text
-        required: true
     link: 
         label: Link alla pagina della mostra
         type:  text

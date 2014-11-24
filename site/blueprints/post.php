@@ -9,12 +9,10 @@ fields:
     title: 
         label: Titolo del post
         type:  text
-        required: true
     date: 
         label: Data del post
         type:  date
         format: dd.mm.yy
-        required: true
     text: 
         label: Testo del post
         type:  textarea
