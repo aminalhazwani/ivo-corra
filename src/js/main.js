@@ -1,5 +1,7 @@
 $( document ).ready(function () {
 
+    $('body').fitVids();
+
     $('.work').css({opacity: 1});
 
     $('.menu__toogle').click(function(){
