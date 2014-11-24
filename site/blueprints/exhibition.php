@@ -4,7 +4,7 @@
 
 title: Page
 pages: false
-files: false
+files: true
 fields:
     title: 
         label: Titolo della mostra
@@ -23,3 +23,7 @@ fields:
     link: 
         label: Link alla pagina della mostra
         type:  text
+    text: 
+        label: Descrizione
+        type:  textarea
+        size: large

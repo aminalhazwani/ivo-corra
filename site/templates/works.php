@@ -27,7 +27,7 @@
                     </a>
                     <?php endforeach ?>
                     
-                    <?php if($work->text()->kirbytext() != ''): ?>
+                    <?php if($work->text() != ''): ?>
                         <div class="work__info">
                             <a class="work__info--button" href="#">Description</a>
                             <div class="work__info--description">

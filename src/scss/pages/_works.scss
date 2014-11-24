@@ -149,7 +149,6 @@
     }
 
     @include e(info) {
-
         @include m(button) {
             display: none;
             z-index: 99999;
@@ -164,6 +163,7 @@
             text-transform: uppercase;
             letter-spacing: 0.25rem;
             font-size: medium;
+            cursor: pointer;
         }
 
         @include m(description) {

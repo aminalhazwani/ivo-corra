@@ -24,8 +24,16 @@ $( document ).ready(function () {
       $('.lb-prev').addClass('activated');
     });
 
-    $('.work__thumb').click(function(){
-        $(this).next('.work__info').addClass('is-active');
+    $('.related-works__item').click(function(){
+        $(this).find('.work__info').addClass('is-active');
+    });
+
+    $('.exhibition').click(function(){
+        $(this).find('.work__info').addClass('is-active');
+    });
+
+    $('.publication').click(function(){
+        $(this).find('.work__info').addClass('is-active');
     });
 
     $('.work__info--button').click(function(){

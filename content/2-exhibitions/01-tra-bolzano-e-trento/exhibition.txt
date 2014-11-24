@@ -1,12 +1,12 @@
-﻿Title: Tra Bolzano e Trento: confine invisibile
+Title: Tra Bolzano e Trento: confine invisibile
 
 ----
 
-Date: 08.08.2014
+Date: 2014-08-08
 
 ----
 
-Enddate: 21.08.2014
+Enddate: 2014-08-21
 
 ----
 
@@ -15,3 +15,15 @@ Place: Museo Civico di Bolzano
 ----
 
 Link: http://it-it.facebook.com/anordditrentoasuddibolzano
+
+----
+
+Text: 
+
+Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec ullamcorper nulla non metus auctor fringilla. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Etiam porta sem malesuada magna mollis euismod. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.
+
+Sed posuere consectetur est at lobortis. Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam quis risus eget urna mollis ornare vel eu leo. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean lacinia bibendum nulla sed consectetur.
+
+Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vestibulum id ligula porta felis euismod semper. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Curabitur blandit tempus porttitor.
+
+Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Sed posuere consectetur est at lobortis. Etiam porta sem malesuada magna mollis euismod.

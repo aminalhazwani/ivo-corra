@@ -32,6 +32,30 @@
                         <?php if($exhibition->link() != ''): ?>
                             <a class="exhibition__link" href="<?php echo $exhibition->link() ?>">link &#8594;</a>
                         <?php endif ?>
+
+                        <?php if($exhibition->hasImages()): ?>
+                            <figure>
+                                <?php foreach($exhibition->images() as $image): ?>
+                                    <a class="box" href="<?php echo $image->url() ?>" data-lightbox="<?php echo ($exhibition->title()) ?>">
+                                        <img src="<?php echo $image->url() ?>" />
+                                    </a>
+                                <?php endforeach ?>
+                            </figure>
+                        <?php endif ?>
+
+                        <?php if($exhibition->text() != ''): ?>
+                            <div class="work__info">
+                                <a class="work__info--button">Description</a>
+                                <div class="work__info--description">
+                                    <div class="work__info--content">
+                                        <h2><?php echo $exhibition->title() ?></h2>
+                                        <p><?php echo $exhibition->text() ?></p>
+                                    </div>
+                                    <div class="work__info--gradient"></div>
+                                    <a class="work__info--close"></a>
+                                </div>
+                            </div>
+                        <?php endif ?>
                     </li>
                 <?php endforeach ?>
             </ul>
@@ -45,7 +69,7 @@
                         <?php if($publication->hasImages()): ?>
                         <figure>
                             <?php foreach($publication->images() as $image): ?>
-                                <a class="box" href="<?php echo $image->url() ?>" data-lightbox="<?php echo ($publication->title()) ?>">
+                                <a class="box publication__image" href="<?php echo $image->url() ?>" data-lightbox="<?php echo ($publication->title()) ?>">
                                     <img src="<?php echo $image->url() ?>" />
                                 </a>
                             <?php endforeach ?>
@@ -64,19 +88,19 @@
 
                         <?php if($publication->text() != ''): ?>
                             <div class="work__info">
-                                <a class="work__info--button" href="#">Description</a>
+                                <a class="work__info--button">Description</a>
                                 <div class="work__info--description">
                                     <div class="work__info--content">
                                         <h2><?php echo $publication->title() ?></h2>
                                         <p><?php echo $publication->text() ?></p>
                                     </div>
                                     <div class="work__info--gradient"></div>
-                                    <a class="work__info--close" href="#"></a>
+                                    <a class="work__info--close"></a>
                                 </div>
                             </div>
                         <?php endif ?>
-                    </li><!--
-                --><?php endforeach ?>
+                    <!-- </li> -->
+                <?php endforeach ?>
             </ul>
         </section>
 
