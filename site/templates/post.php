@@ -17,5 +17,7 @@
 </div>
 
 <?php snippet('contact') ?>
-<?php snippet('scripts') ?>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="<?php echo $site->url() ?>/assets/scripts/vendor/vendor.min.js"></script>
+<script src="<?php echo $site->url() ?>/assets/scripts/main.min.js"></script>
 <?php snippet('foot') ?>
