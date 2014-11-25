@@ -13,6 +13,7 @@
 
         @include m(item) {
             display: inline-block;
+            font-weight: 700;
             &:last-child {
                 &:after {
                     content: " ";
@@ -20,6 +21,7 @@
             }
             &:after {
                 content: "\2022";
+                font-weight: 400;
             }
         }
     }
@@ -43,7 +45,7 @@
 .exhibition {
     @include e(title) {
         margin: 0;
-        font-weight: 400;
+        font-weight: 700;
     }
 
     @include e(link) {
@@ -52,11 +54,27 @@
         text-decoration: none;
         text-transform: uppercase;
         border-bottom: 1px solid $black;
+
+        @include media-query(desk) {
+            font-size: medium;
+        }
+
+        @include media-query(desk-wide) {
+            font-size: medium;
+        }
     }
 
     @include e(date) {
         margin-right: 1em;
         font-size: small;
+
+        @include media-query(desk) {
+            font-size: medium;
+        }
+
+        @include media-query(desk-wide) {
+            font-size: medium;
+        }
     }
 
     figure {
@@ -115,6 +133,14 @@
 
         &:after {
             content: ", ";
+        }
+
+        @include media-query(desk) {
+            font-size: medium;
+        }
+
+        @include media-query(desk-wide) {
+            font-size: medium;
         }
     }
 

@@ -11,23 +11,66 @@
     }
 
     @include e(post) {
-        margin-bottom: 2rem;
+        margin-bottom: 4rem;
 
         @include m(date) {
             margin-bottom: .5rem;
             text-transform: uppercase;
             letter-spacing: .10rem;
             font-size: small;
+            @include media-query(lap-and-up) {
+                font-size: medium;
+            }
         }
 
         @include m(title) {
             margin: 0;
-            font-weight: normal;
         }
 
         @include m(description) {
             margin: 0;
             font-size: medium;
+        }
+
+        p {
+            margin: 0.5rem 0;
+            @include media-query(lap-and-up) {
+                margin: 1rem 0;
+            }
+        }
+
+        p:first-of-type {
+            margin-top: 0;
+        }
+
+        figure {
+            line-height: 0;
+        }
+    }
+
+    @include e(archive) {
+        background-color: $black;
+        padding: 1rem 2rem;
+        color: $white;
+
+        a {
+            color: $white;
+            text-decoration: none;
+            border-bottom: 1px solid $white;
+            text-transform: uppercase;
+            font-size: large;
+            letter-spacing: 0.25rem;
+
+            @include media-query(desk) {
+                float: right;
+            }
+            @include media-query(desk-wide) {
+                float: right;
+            }
+
+            @include media-query(tabl-and-down) {
+                font-size: medium;
+            }
         }
     }
 }

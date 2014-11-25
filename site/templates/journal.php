@@ -4,14 +4,20 @@
 
 <div class="journal__container">
   <ul class="journal__post-list">
-    <?php foreach($pages->find('/journal')->children()->visible()->sortBy($sort='date', $direction='desc') as $post): ?>
-        <li class="journal__post">
-          <span class="journal__post--date"><?php echo $post->date('M. j, Y') ?></span>
-          <p class="journal__post--title"><?php echo $post->title() ?></p>
-          <p class="journal__post--description"><?php echo $post->text() ?></p>
-        </li>
+    <?php $num = $pages->find('/journal')->numpost(); ?>
+    <!--<?php echo $num ?>-->
+    <?php foreach($pages->find('/journal')->children()->visible()->sortBy($sort='date', $direction='desc')->limit(3) as $post): ?>
+      <li class="journal__post">
+        <span class="journal__post--date"><?php echo $post->date('M. d, Y') ?></span>
+        <h3 class="journal__post--title"><?php echo $post->title() ?></h3>
+        <?php echo $post->text()->kirbytext() ?>
+      </li>
     <?php endforeach ?>
   </ul>
+
+  <div class="journal__archive">
+    <p>Do you like what are you reading? <a href="<?php echo $site->url() ?>/archive">View all posts</a></p>
+  </div>
 
   <div class="dot__container">
     <?php snippet('dotdot') ?>

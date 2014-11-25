@@ -4,7 +4,7 @@
 
 title: Page
 pages: false
-files: false
+files: true
 fields:
     title: 
         label: Titolo pagina

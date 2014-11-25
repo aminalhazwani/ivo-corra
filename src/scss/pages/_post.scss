@@ -1,0 +1,20 @@
+.post {
+    @include e(container) {
+        @include container();
+
+        p {
+	        margin: 0.5rem 0;
+	        @include media-query(lap-and-up) {
+	            margin: 1rem 0;
+	        }
+	    }
+
+	    p:first-of-type {
+	        margin-top: 0;
+	    }
+
+	    figure {
+	        line-height: 0;
+	    }
+    }
+}

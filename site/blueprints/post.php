@@ -2,9 +2,9 @@
 
 # post blueprint
 
-title: Page
+title: Post
 pages: false
-files: false
+files: true
 fields:
     title: 
         label: Titolo del post
@@ -17,4 +17,3 @@ fields:
         label: Testo del post
         type:  textarea
         size:  large
-        buttons: true

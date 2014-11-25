@@ -3,7 +3,7 @@
 <?php snippet('menu') ?>
 
 <div class="about__container">
-    <?php echo markdown($page->bio()) ?>
+    <?php echo $page->bio()->kirbytext() ?>
 
     <div class="dot__container">
         <?php snippet('dotdot') ?>
