@@ -33,6 +33,10 @@
                             <a class="exhibition__link" href="<?php echo $exhibition->link() ?>">link &#8594;</a>
                         <?php endif ?>
 
+                        <?php if($exhibition->shorttext() != ''): ?>
+                            <p class="exhibition__short-description"><?php echo $exhibition->shorttext() ?></p>
+                        <?php endif ?>
+
                         <?php if($exhibition->hasImages()): ?>
                             <figure>
                                 <?php foreach($exhibition->images() as $image): ?>

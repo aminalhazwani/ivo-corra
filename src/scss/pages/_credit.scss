@@ -77,6 +77,14 @@
         }
     }
 
+    @include e(short-description) {
+        margin: 0.2rem 0 1rem 0;
+
+        @include media-query(tabl-and-down) {
+            margin-bottom: 0;
+        }
+    }
+
     figure {
         line-height: 0;
         margin-top: 0.5rem;

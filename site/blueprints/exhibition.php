@@ -23,7 +23,11 @@ fields:
     link: 
         label: Link alla pagina della mostra
         type:  text
+    shorttext: 
+        label: Breve descrizione
+        type: textarea
+        size: large
     text: 
         label: Descrizione
-        type:  textarea
+        type: textarea
         size: large
