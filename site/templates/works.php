@@ -14,7 +14,7 @@
             <ul class="tag__name--related-works new">
             <?php 
             $tagname = $tag->name();
-            foreach($works->children()->filterBy('tags', $tagname, ',') as $work): ?>
+            foreach($works->children()->visible()->filterBy('tags', $tagname, ',') as $work): ?>
                 <li class="related-works__item">
                     <?php $image = $work->images()->first(); ?>
 
@@ -67,7 +67,7 @@
                 <ul class="tag__name--related-works">
                 <?php 
                 $tagname = $tag->name();
-                foreach($works->children()->filterBy('tags', $tagname, ',') as $work): ?>
+                foreach($works->children()->visible()->filterBy('tags', $tagname, ',') as $work): ?>
                     <li class="related-works__item">
                         <?php $image = $work->images()->first(); ?>
                         
