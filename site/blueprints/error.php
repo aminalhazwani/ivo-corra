@@ -2,7 +2,8 @@
 
 title: Error
 pages: false
-files: false
+files: 
+	sortable: true
 fields:
   title:
     label: Title

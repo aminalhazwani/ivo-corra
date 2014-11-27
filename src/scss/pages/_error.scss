@@ -1,0 +1,20 @@
+.error {
+    @include e(container) {
+        @include container();
+
+        p {        
+            margin: 0 0 1rem 0;
+        }
+
+        figure {
+            img {
+                width: auto;
+                max-width: 100%;
+            }
+        }
+    }
+
+    @include e(title) {
+        margin: 0;
+    }
+}
