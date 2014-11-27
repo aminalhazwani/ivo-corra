@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <?php if($page->title() != ''): ?>
+        <?php if($page->title() != 'Homepage'): ?>
             <title><?php echo html($site->title()) ?> – <?php echo html($page->title()) ?></title>
         <?php else: ?>
-            <title><?php echo html($site->title()) ?> – <?php echo html($site->description()) ?></title>
+            <title><?php echo html($site->title()) ?></title>
         <?php endif ?>
 
         <?php if($page->text() != ''): ?>
