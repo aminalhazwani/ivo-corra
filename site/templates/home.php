@@ -14,6 +14,7 @@
             <?php foreach($work->images() as $image): ?>
                 <?php if($image->inserisci() == 'ja'): ?>
                     <a class="box" href="<?php echo $image->url() ?>" data-lightbox="<?php echo $work->title() ?>" data-title="<?php echo $image->caption() ?>">
+                        <!-- <img src="<?php echo $img->url() ?>" alt="<?php echo $work->title() ?>"> -->
                         <img src="<?php echo thumb($img, array('width' => 400), false) ?>" alt="<?php echo $work->title() ?>">
                     </a>
                 <?php endif ?>
