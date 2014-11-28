@@ -4,12 +4,16 @@
     }
 
     @include e(post) {
-    	margin-bottom: 2rem;
+    	margin-bottom: 3rem;
+
+        @include media-query(tabl-and-down) {
+            margin-bottom: 2rem;
+        }
 
     	@include m(date) {
     		@include media-query(lap-and-up) {
 	    		float: left;
-				height: 100px;
+				height: 130px;
 				margin-top: 0.2rem;
 				margin-right: 2rem;
     		}
