@@ -39,7 +39,7 @@
 
                         <?php if($exhibition->hasImages()): ?>
                             <figure>
-                                <?php foreach($exhibition->images() as $image): ?>
+                                <?php foreach($exhibition->images()->sortBy('sort', 'asc') as $image): ?>
                                     <a class="box" href="<?php echo $image->url() ?>" data-lightbox="<?php echo ($exhibition->title()) ?>">
                                         <img src="<?php echo $image->url() ?>" />
                                     </a>
@@ -72,7 +72,7 @@
                     <li class="publication">
                         <?php if($publication->hasImages()): ?>
                         <figure>
-                            <?php foreach($publication->images() as $image): ?>
+                            <?php foreach($publication->images()->sortBy('sort', 'asc') as $image): ?>
                                 <a class="box publication__image" href="<?php echo $image->url() ?>" data-lightbox="<?php echo ($publication->title()) ?>">
                                     <img src="<?php echo $image->url() ?>" />
                                 </a>

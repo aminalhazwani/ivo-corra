@@ -16,9 +16,8 @@
             $tagname = $tag->name();
             foreach($works->children()->visible()->filterBy('tags', $tagname, ',') as $work): ?>
                 <li class="related-works__item">
-                    <?php $image = $work->images()->first(); ?>
-
-                    <?php foreach($work->images() as $imageLightbox): ?>
+                    <?php $image = $work->images()->sortBy('sort', 'asc')->first(); ?>
+                    <?php foreach($work->images()->sortBy('sort', 'asc') as $imageLightbox): ?>
                     <a class="work__thumb" href="<?php echo $imageLightbox->url() ?>" data-lightbox="<?php echo $work->title() ?>" data-title="<?php echo $imageLightbox->caption() ?>">
                         <figure class="work__element">
                             <div class="work__element--container"><img src="<?php echo thumb($image, array('height' => 260), false) ?>"></div>
@@ -69,15 +68,14 @@
                 $tagname = $tag->name();
                 foreach($works->children()->visible()->filterBy('tags', $tagname, ',') as $work): ?>
                     <li class="related-works__item">
-                        <?php $image = $work->images()->first(); ?>
-                        
-                        <?php foreach($work->images() as $imageLightbox): ?>
-                        <a class="work__thumb" href="<?php echo $imageLightbox->url() ?>" data-lightbox="<?php echo $work->title() ?>" data-title="<?php echo $imageLightbox->caption() ?>">
-                            <figure class="work__element">
-                                <div class="work__element--container"><img src="<?php echo thumb($image, array('height' => 260), false) ?>"></div>
-                                <figcaption><?php echo $work->title() ?></figcaption>
-                            </figure>
-                        </a>
+                        <?php $image = $work->images()->sortBy('sort', 'asc')->first(); ?>
+                        <?php foreach($work->images()->sortBy('sort', 'asc') as $imageLightbox): ?>
+                            <a class="work__thumb" href="<?php echo $imageLightbox->url() ?>" data-lightbox="<?php echo $work->title() ?>" data-title="<?php echo $imageLightbox->caption() ?>">
+                                <figure class="work__element">
+                                    <div class="work__element--container"><img src="<?php echo thumb($image, array('height' => 260), false) ?>"></div>
+                                    <figcaption><?php echo $work->title() ?></figcaption>
+                                </figure>
+                            </a>
                         <?php endforeach ?>
 
                         <?php if($work->text() != ''): ?>

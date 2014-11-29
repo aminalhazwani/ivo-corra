@@ -10,8 +10,8 @@
     <?php foreach($pages->find('works')->children()->visible() as $work): ?>
     <?php if($work->home() == 'ja'): ?>
         <div class="work"> 
-            <?php $img = $work->images()->first(); ?>
-            <?php foreach($work->images() as $image): ?>
+            <?php $img = $work->images()->sortBy('sort', 'asc')->first(); ?>
+            <?php foreach($work->images()->sortBy('sort', 'asc') as $image): ?>
                 <?php if($image->inserisci() == 'ja'): ?>
                     <a class="box" href="<?php echo $image->url() ?>" data-lightbox="<?php echo $work->title() ?>" data-title="<?php echo $image->caption() ?>">
                         <!-- <img src="<?php echo $img->url() ?>" alt="<?php echo $work->title() ?>"> -->
