@@ -92,8 +92,12 @@
         a {
         display: none;
 
-        &:first-child {
+            &:first-child {
                 display: block;
+            }
+
+            img {
+                max-width: 100%;
             }
         }
     }
