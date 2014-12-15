@@ -14,8 +14,8 @@
             <?php foreach($work->images()->sortBy('sort', 'asc') as $image): ?>
                 <?php if($image->inserisci() == 'ja'): ?>
                     <a class="box" href="<?php echo $image->url() ?>" data-lightbox="<?php echo $work->title() ?>" data-title="<?php echo $image->caption() ?>">
-                        <!-- <img src="<?php echo $img->url() ?>" alt="<?php echo $work->title() ?>"> -->
-                        <img src="<?php echo thumb($img, array('width' => 400), false) ?>" alt="<?php echo $work->title() ?>">
+                        <img src="<?php echo $img->url() ?>" alt="<?php echo $work->title() ?>">
+                        <!-- <img src="<?php echo thumb($img, array('width' => 400), false) ?>" alt="<?php echo $work->title() ?>">  -->
                     </a>
                 <?php endif ?>
             <?php endforeach ?>
@@ -26,7 +26,7 @@
 <?php snippet('arrows') ?>
 <?php snippet('scripts') ?>
 <?php snippet('contact') ?>
-<script src="assets/scripts/home.min.js"></script>
+<script src="assets/scripts/home-version-two.min.js"></script>
 <script type="text/javascript">
     $(window).load(function() {
         $('.spinner__container').fadeOut(1000);

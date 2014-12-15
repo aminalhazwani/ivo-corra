@@ -5,14 +5,7 @@
     line-height: 0;
 
     position: absolute;
-    min-width: 15%;
-    max-width: 30%;
-
     opacity: 0;
-
-    @include media-query(palm) {
-        max-width: 40%;
-    }
 }
 
 .work a {
