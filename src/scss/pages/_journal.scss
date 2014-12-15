@@ -37,14 +37,25 @@
             @include media-query(lap-and-up) {
                 margin: 1rem 0;
             }
+
+            &:before {
+                content: " ";
+                margin: 0 0 0 3rem;
+            }
+
+            &:first-of-type {
+                margin-top: 0;
+
+                &:before {
+                    margin: 0;
+                }
+            }
         }
 
-        p:first-of-type {
-            margin-top: 0;
-        }
 
         figure {
             line-height: 0;
+            padding: 1rem 0;
 
             img {
                 width: auto;
