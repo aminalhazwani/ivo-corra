@@ -1,13 +1,15 @@
 $(function () {
 
-	var highRes = {minPicSize:300, maxPicSize:600, minScreenWidth:1024, maxScreenWidth:-1, 
+	var useOnlyWithForScaling = true;
+
+	var highRes = {minPicSize:240, maxPicSize:600, minScreenWidth:1024, maxScreenWidth:-1, 
 	minPaddingX:100, maxPaddingX:200, minPaddingY:200, maxPaddingY:400, iterations:100};
 	
 	var midRes = {minPicSize:200, maxPicSize:350, minScreenWidth:480, maxScreenWidth:1023, 
-	minPaddingX:80, maxPaddingX:120, minPaddingY:100, maxPaddingY:300, iterations:50};
+	minPaddingX:20, maxPaddingX:200, minPaddingY:100, maxPaddingY:300, iterations:50};
 	
-	var lowRes = {minPicSize:260, maxPicSize:300, minScreenWidth:0, maxScreenWidth:479, 
-	minPaddingX:20, maxPaddingX:40, minPaddingY:20, maxPaddingY:70, iterations:10};
+	var lowRes = {minPicSize:180, maxPicSize:300, minScreenWidth:0, maxScreenWidth:479, 
+	minPaddingX:20, maxPaddingX:160, minPaddingY:20, maxPaddingY:70, iterations:10};
 
 	function requiredResConfiguration(screen_width){
 		var currentRes = highRes;
@@ -152,12 +154,10 @@ $(function () {
 			var remainingSizeLeft = screen_width - (left.x+newImageSize.width) - currentRes.maxPaddingX;
 			
 			if (remainingSizeLeft < 0){
-			console.log("size");
 				left.y = top.y;
 				if (left.x > (screen_width*0.75))
 					left.x = 0;
 				else{
-				console.log("else");
 					left.x = screen_width/4;
 				}
 
@@ -194,7 +194,7 @@ $(function () {
 				return new Area(0, 0, width, height);
 			}			
 			var newWidth = currentRes.minPicSize+(imageWidth*Math.random());
-			if (width < height){
+			if (width < height && !useOnlyWithForScaling){
 				var theight = newWidth;
 				newWidth = newWidth * width / height;
 				height = theight;
