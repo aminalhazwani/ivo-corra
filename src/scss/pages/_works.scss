@@ -20,6 +20,7 @@
     }
 
     @include e(about) {
+        font-size: large;
         padding: 1.3rem 2rem 2rem 2rem;
         @include media-query(tabl-and-down) {
             padding: 1rem;
