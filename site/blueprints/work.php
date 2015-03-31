@@ -15,7 +15,7 @@ fields:
         options:
             ja:  Inserisci
             nein: Non inserisci
-        default: ja
+        default: nein
     tags: 
         label: Categoria
         type: tags
