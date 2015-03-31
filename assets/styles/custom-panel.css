@@ -1,0 +1,25 @@
+@media screen and (min-width: 40em) {
+  .files .grid-item {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 50em) {
+  .files .grid-item {
+    width: 33.33%;
+  }
+}
+@media screen and (min-width: 60em) {
+  .files .grid-item {
+    width: 20%;
+  }
+}
+@media screen and (min-width: 70em) {
+  .files .grid-item {
+    width: 12%;
+  }
+}
+@media screen and (min-width: 80em) {
+  .files .grid-item {
+    width: 12%;
+  }
+}
